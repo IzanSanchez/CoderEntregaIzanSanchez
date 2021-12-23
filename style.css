@@ -155,6 +155,7 @@ header{
             left: 50%;
         }
 
+
             /*====CABECERA MOBILE====*/
            
             @media only screen and (max-width:1208px){
@@ -275,14 +276,16 @@ header{
                 height: 450px;
                 margin: 60px 0 0 3.5%;
                 overflow: hidden;
+                transition: all .2s ease-in-out;
             }
 
             .juego1__imagen img{
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-
             }
+
+            .juego1__imagen:hover { transform: scale(1.1); }
 
         .juego2{
             grid-area: juego2;
@@ -306,7 +309,17 @@ header{
                     height: 450px;
                     margin: 60px 1.5% 0 3.5%;
                     overflow: hidden;
+                    /*filtro blanco y negro*/
+                    transition: all .3s ease-in-out;
+                    -webkit-filter: grayscale(100%); 
+                    filter: grayscale(100%); 
                 }
+
+                .juego2__imagen:hover {
+                    -webkit-filter: grayscale(0%); 
+                    filter: grayscale(0%); 
+                    transform: scale(1.1);
+                  }
     
                 .juego2__imagen img{
                     width: 100%;

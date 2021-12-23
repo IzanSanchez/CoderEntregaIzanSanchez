@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ANIM LINK-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--CSS LINK-->
     <link rel="stylesheet" href="style.css">
     <!--FONTS-->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
     </style>
+   
     <title>Shield conquerer</title>
 </head>
 <body>
@@ -39,7 +43,7 @@
             <!--Seccion historia-->
             <section id="secHistoria">
                 <section class="historia">
-                <div>
+                <div data-aos="fade-down">
                 <h2 class="historia__titulo">Historia</h2>
                 <p class="historia__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     In error amet et, expedita beatae molestias officia alias 
@@ -59,7 +63,7 @@
             <!--Seccion juego-->
             <section id="secJuego">
             <section class="juego">
-
+            
                 <div class="juego1">
                     <div class="juego1__texto">
                         <h2>Juego 1</h2>
@@ -74,6 +78,7 @@
                         <img src="assets/img/caja_shield_conquerer.png" alt="imagen juego">
                     </div>
                 </div>
+            
             
                 <div class="juego2">
                         <div class="juego2__imagen">
@@ -155,5 +160,10 @@
             </div> 
         </footer>
     </div>
+    <!--ANIM SCRIPTS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
