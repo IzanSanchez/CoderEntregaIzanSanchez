@@ -1,23 +1,871 @@
+/*====GENERAL SETTINGS===*/
+
 *{
-    margin: 0;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 * a{
     text-decoration: none;
 }
 
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+* ul{
+    list-style-type: none;
 }
 
-.cuerpo{
-    height: 770px;
-    width: 100%;
-    margin: 5rem;
-    border: 0px solid transparent;
-    border-radius: 3rem;
-    background-image: linear-gradient(0deg, #56ab2f, #a8e063);
+h2{
+  font-family:"Apex Med";
+
+  font-size: 3rem;
+  color: #c7e2df;
 }
+p{
+  font-family:"Apex Light";
+  font-size: 1.5rem;
+  color: #c7e2df;
+}
+
+/*====FONTS====*/
+
+@font-face {
+  font-family: Apex Med;
+  src: url(assets/fonts/Apex\ Mk3-Medium.otf);
+}
+
+@font-face {
+  font-family: Apex Light;
+  src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
+}
+
+
+/*======================*/
+/*=========INDEX=========*/
+/*======================*/
+
+
+header{
+    /*grid-area: header;*/
+    width: 100%;
+    height: auto;
+}
+
+    /*====NAV DESKTOP====*/
+    .barraNav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        background-color: #0e1114;
+    }
+    
+    .barraNav__logo img{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 40px;
+        width: auto;
+        padding: 1rem;
+        padding-left: 32px;
+    }
+    
+    .barraNav__ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: "Apex Light";
+        font-size: 22px;
+        padding: 1rem;
+    }
+    
+    .barraNav__ul li{
+        padding-left: 2rem;
+    }
+    
+    .barraNav__ul a{
+        color: #c7e2df;
+    }
+    
+    .barraNav__ul a:hover{
+        color: #196966;
+    }
+
+
+
+/*======================*/
+/*=========INDEX=========*/
+/*======================*/
+
+/*====BODY====*/
+
+/*
+.bodyIndex{
+    display: grid;
+    grid-template-rows: auto auto auto ;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "header"
+    "IndexMain"
+    "footer"
+    ;
+}
+*/
+
+/*====MAIN====*/
+
+.bodyIndex main{
+    /*grid-area: IndexMain;*/
+    background-image: url(assets/img/BG.png);
+    background-size:cover;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "cabecera" 
+    "historia"
+    "juego"
+    "contacto"
+    ;
+}
+
+
+    /*====CABECERA DESKTOP====*/
+    .cabecera{
+        grid-area: cabecera;
+        height: 780px;
+        width: 100%; 
+        overflow: hidden;
+    }
+        .cabecera__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 100% 65%;
+           
+        }
+        .cabecera__logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            padding: 3rem;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+            /*====CABECERA MOBILE====*/
+           
+            @media only screen and (max-width:1208px){
+
+                .cabecera{
+                height: 555px;
+                }
+
+                .cabecera__logo {
+                max-width: 400px;
+                top: 350px;
+                }
+            }
+
+            @media only screen and (max-width:1080px){
+
+               
+
+                .cabecera__logo {
+                max-width: 400px;
+                top: 415px;
+                }
+            }
+
+            @media only screen and (max-width:710px){
+
+                .cabecera{
+                height: 400px;
+                }
+
+                .cabecera__logo {
+                max-width: 250px;
+                top: 375px;
+                }
+            }
+
+
+    /*====SECCION HISTORIA====*/
+
+    .historia{
+        grid-area: historia;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+        .historia div{
+            width: 80%;
+            height: auto;
+            margin: 20rem 10% 30rem 10%;
+        }
+
+        .historia__titulo{
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .historia__texto{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-top: 25px;
+        }
+
+            @media only screen and (max-width:1337px){
+
+                .historia div{
+                    margin: 10rem 10% 10rem 10%;
+                }
+            }
+         
+
+    /*====SECCION JUEGO====*/        
+
+    .juego{
+        grid-area: juego;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-row-gap: 3rem;
+        grid-template-areas:
+        "juego1 juego1 ."
+        ". juego2 juego2"
+        "juego3 juego3 ."
+        "juego4 juego4 juego4";
+    }
+
+    .juego p{
+        font-size: 20px;
+    }
+
+        .juego1{
+            grid-area: juego1;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            height: auto;
+            background-color: darkslategray;
+        }
+
+
+            .juego1__texto{
+                width: 30%;
+                height: 500px;
+                padding: 3rem 2rem 2rem 2rem;
+                margin-left: 15%;
+            }
+
+
+            .juego1__imagen{
+                width: 450px;
+                height: 450px;
+                margin: 60px 0 0 3.5%;
+                overflow: hidden;
+            }
+
+            .juego1__imagen img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+
+        .juego2{
+            grid-area: juego2;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            height: auto;
+            background-color: darkslategray;
+        }
+    
+    
+                .juego2__texto{
+                    width: 30%;
+                    height: 500px;
+                    padding: 3rem 2rem 2rem 2rem;
+                    margin-right: 15%;
+                }
+    
+                .juego2__imagen{
+                    width: 450px;
+                    height: 450px;
+                    margin: 60px 1.5% 0 3.5%;
+                    overflow: hidden;
+                }
+    
+                .juego2__imagen img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+    
+                }
+
+        .juego3{
+            grid-area: juego3;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            height: auto;
+            background-color: darkslategray;
+        }
+        
+        
+                .juego3__texto{
+                    width: 30%;
+                    height: 500px;
+                    padding: 3rem 2rem 2rem 2rem;
+                    margin-left: 15%;
+                }
+        
+        
+                .juego3__imagen{
+                    width: 450px;
+                    height: 450px;
+                    margin: 60px 0 0 3.5%;
+                    overflow: hidden;
+                }
+        
+                .juego3__imagen img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+        
+                }
+
+
+        .juego4{
+            grid-area: juego4;
+            height: 780px;
+            width: 100%; 
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+                .juego4__texto{
+                    margin: 250px 10% 0 10%;
+                    padding: 3%;
+                    position: absolute;
+                    width: auto;
+                    max-width: 600px;
+                    text-align: center;
+                    z-index: 1;
+                    background-color: rgba(37, 47, 54, 0.26);
+                }
+                .juego4__img{
+                    filter: blur(7px);
+                    -webkit-filter: blur(7px);
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: 100% 65%;
+                }
+
+
+                 /*====JUEGO MOBILE====*/
+           
+                    @media only screen and (max-width:1337px){
+
+                        .juego1__texto{
+                            height: 400px;
+                        }
+                        .juego1__imagen{
+                            width: 350px;
+                            height: 350px;
+                        }
+
+                        .juego2__texto{
+                            height: 400px;
+                        }
+                        .juego2__imagen{
+                            width: 350px;
+                            height: 350px;
+                        }
+
+                        .juego3__texto{
+                            height: 400px;
+                        }
+                        .juego3__imagen{
+                            width: 350px;
+                            height: 350px;
+                        }
+            
+                    }
+
+                    @media only screen and (max-width:1085px){
+                        
+                        .juego{
+                            grid-area: juego;
+                            width: 100%;
+                            height: auto;
+                            display: grid;
+                            grid-template-rows: repeat(4, auto);
+                            grid-template-columns: 1fr;
+                            grid-row-gap: 1.5rem;
+                            grid-template-areas:
+                            "juego1"
+                            "juego2"
+                            "juego3"
+                            "juego4";
+                        }
+
+                    }
+
+                    @media only screen and (max-width:972px){
+
+                        .juego1{
+                            justify-content: center;
+                            text-align: center;
+                        }
+
+                        .juego1__texto{
+                            height: auto;
+                            width: 80%;
+                            margin-left: 0;
+                        }
+
+                        .juego1__imagen{
+                            width: 350px;
+                            height: 350px;
+                            margin: 5% 0 5% 0;
+                        }
+
+                        .juego2{
+                            flex-wrap: wrap-reverse;
+                            justify-content: center;
+                            text-align: center;
+                        }
+
+                        .juego2__texto{
+                            height: auto;
+                            width: 80%;
+                            margin-right: 0;
+                        }
+
+                        .juego2__imagen{
+                            width: 350px;
+                            height: 350px;
+                            margin: 5% 0 5% 0;
+                        }
+
+                        .juego3{
+                            justify-content: center;
+                            text-align: center;
+                        }
+
+                        .juego3__texto{
+                            height: auto;
+                            width: 80%;
+                            margin-left: 0;
+                        }
+
+                        .juego3__imagen{
+                            width: 350px;
+                            height: 350px;
+                            margin: 5% 0 5% 0;
+                        }
+
+                    }
+
+
+    .contacto{
+        grid-area: contacto;
+        width: auto;
+        height: auto;
+        margin: 4rem;
+        padding: 5rem 10% 5rem 10%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+/*======================*/
+/*=========FAQ=========*/
+/*======================*/
+
+.bodyFaq{
+    background-image: url(assets/img/BG.png);
+    background-size:cover;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "faqMain"
+    "footer";
+}
+
+    .faq{
+        grid-area: faqMain;
+        margin: 6rem 10% 8rem 10%; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .faq h1{
+        font-family:"Apex Med";
+        font-size: 55px;
+        color: #c7e2df;
+        text-align: center;
+        width: 100%;
+        height: 120px;
+        padding-top: 50px;
+    }
+    .faqPregunta{
+        display: flex;
+        width: 90%;
+        height: 80px;
+        padding: 20px;
+        margin: 1rem 0px 1rem 0px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: #232527;
+    }
+    .faqPregunta h2{
+        font-size: 22px;
+        padding-top: 25px;
+        width: 95%;
+    }
+    .faqPregunta img{
+        width: auto;
+        height: 35px;
+        margin-top: 24px;
+    }
+
+    
+        /*====CABECERA MOBILE====*/
+            
+        @media only screen and (max-width:850px){
+            .faq{
+                margin: 2rem 10% 8rem 10%; 
+            }
+        }
+
+
+/*======================*/
+/*=========BLOG=========*/
+/*======================*/
+.bodyBlog main{
+    background-image: url(assets/img/BG.png);
+    background-size:cover;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "bodyBlog"
+    "footer";
+}
+    
+    .blogH2{
+        font-family:"Apex Light";
+        font-size: 30px;
+        color: #c7e2df;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        padding-top: 200px;
+    }
+    .blogEntrada{
+        width: 1000px;
+        height: 610px;
+        padding: 50px;
+        margin-left: 400px;
+        margin-top: 45px;
+        background-color: #232527;
+    }
+    .blogEntrada h2{
+        font-size: 42px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .blogEntrada p{
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    #imagenNoticia{
+        width: auto;
+        height: 300px;
+        margin-top: 30px;
+        margin-left: 230px;
+    }
+    .blogEntrada__link {
+        font-family:"Apex Light";
+        font-size: 25px;
+        margin-top: 30px;
+        text-decoration: none;
+    }
+    .blogEntrada__link a{
+        color: #c7e2df;
+    }
+    .blogEntrada a:hover{
+        color: #196966;
+    }
+
+
+
+/*==============================*/
+/*=========ENTRADA BLOG=========*/
+/*==============================*/
+
+.bodyBlogEntry main{
+    background-image: url(assets/img/BG.png);
+    background-size:cover;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "bodyBlogEntry"
+    "footer";
+}
+
+    .entrada{
+        grid-area: bodyBlogEntry;
+        margin: 6rem 10% 8rem 10%; 
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .entradaTitulo{
+        font-family:"Apex Light";
+        font-size: 30px;
+        color: #c7e2df;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        padding-top: 150px;
+    }
+    .entradaCuerpo{
+        width: 60%;
+        min-height: 690px;
+        height: auto;
+        padding: 50px;
+        margin-top: 10px;
+        background-color: #232527;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .entradaCuerpo__img{
+        width: auto;
+        height: auto;
+        max-width: 750px;
+        max-height: 400px;
+        margin: 30px 10% 0 10%;
+    }
+    .entradaCuerpo__img img{
+        width: 100%;
+        height: 100%;
+    }
+     .entradaCuerpo__vid{
+        width: auto;
+        height: auto;
+        max-width: 750px;
+        max-height: 400px;
+        margin: 30px 10% 0 10%;
+    }
+    #entradaCuerpo__video{
+        margin-left: 120px; 
+    }
+    .entradaCuerpo p{
+        height: auto;
+        font-size: 22px;
+        margin-top: 30px;
+        background-color: firebrick;
+    }
+    .entradaCuerpo__link{
+        font-family:"Apex Light";
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    .entradaCuerpo__link a{
+        color: #c7e2df;
+    }
+    .entradaCuerpo__link a:hover{
+        color: #196966;
+    }
+    .entradaCuerpo__hora{
+        font-family:"Apex Light";
+        font-size: 17px;
+        color: #8b9e9c;
+        font-style: italic;
+        margin-top: 15px;
+    }        
+
+/*======================*/
+/*=========FOOTER=========*/
+/*======================*/
+
+
+footer{
+    /*grid-area: footer;*/
+    width: 100%;
+    height: auto;
+}
+
+    /*====FOOTER DESKTOP====*/
+
+    .gridFooter {
+        display: grid;
+        background-color: #0e1114;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        overflow: hidden;
+        grid-template-columns: repeat(3) 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "legal logo rrss";
+
+    }
+
+    .gridFooter a{
+        color: #889b99;
+    }
+
+    .gridFooter a:hover{
+        color: #4e5858;
+    }
+
+    /*==logo==*/
+
+    .gridFooter__logo { 
+        grid-area: logo; 
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+    }
+
+            .gridFooter__logo img{
+            margin: 10px 0px 0px 0px;
+            padding: 1rem;
+            width: 300px;
+            height: auto;
+            }
+    
+    /*==legal==*/
+        
+    .gridFooter__legal { 
+        grid-area: legal; 
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        }
+
+            .gridFooter__legal ul{
+            margin: 30px 0px 0px 0px;
+            padding: 1rem;
+            width: 150px;
+            height: fit-content;
+            }
+    
+    /*==rrss==*/
+
+    .gridFooter__rrss { 
+        grid-area: rrss; 
+        width: 100%;
+        height: 160px;
+        display: flex;
+        justify-content: center;
+        }
+
+            .gridFooter__rrss ul{
+            margin: 30px 0px 0px 0px;
+            padding: 1rem;
+            width: 150px;
+            height: fit-content;
+            text-align: end;
+            }
+
+        /*====FOOTER MOBILE====*/
+
+        @media only screen and (max-width:710px){
+
+            .gridFooter {
+                display: grid;
+                background-color: #0e1114;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                "logo logo"
+                "legal rrss";
+            }
+
+            /*==logo==*/
+
+            .gridFooter__logo { 
+                grid-area: logo; 
+                display: flex;
+                justify-content: center;
+            }
+
+                    .gridFooter__logo img{
+                    margin: 10px 0px 0px 0px;
+                    padding: 1rem;
+                    width: 300px;
+                    height: auto;
+                    }
+
+            /*==legal==*/
+
+            .gridFooter__legal { 
+                grid-area: legal;
+                display: flex;
+                justify-content: center;
+            }
+
+                    .gridFooter__legal ul{
+                    margin: 30px 0px 0px 0px;
+                    height: 150px;
+                    width: fit-content;
+                    padding: 1rem;
+                    }
+
+            /*==rrss==*/
+            
+            .gridFooter__rrss { 
+                grid-area: rrss; 
+                display: flex;
+                justify-content: center;
+            }
+
+                    .gridFooter__rrss ul{
+                    margin: 30px 0px 0px 0px;
+                    height: 150px;
+                    width: fit-content;
+                    padding: 1rem;
+                    text-align: end;
+                    }   
+        }
