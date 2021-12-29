@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP y CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <!--FONTS-->
     <style>
@@ -13,27 +15,51 @@
 </head>
 <body>
     <div class="bodyIndex">
-        
-        <!-------HEADER------->
-        <header>
-            <nav class="barraNav">
-                <div class="barraNav__logo"><a href="index.html"><img src="assets/img/logo_blanco.png" alt="logo shield conquerer"></a></div>
-                <ul class="barraNav__ul">
-                    <li class="barraNav__pages"><a href="#secHistoria">Historia</a></li>
-                    <li class="barraNav__pages"><a href="#secJuego">Juego</a></li>
-                    <li class="barraNav__pages"><a href="#secContacto">Contacto</a></li>
-                    <li class="barraNav__pages__faq"><a href="pages/faq.html">FAQ</a></li>
-                    <li class="barraNav__pages__blog"><a href="pages/blog.html">blog</a></li>
-                    <li class="barraNav__pages__entry"><a href="pages/blogEntry1.html">Articulo1</a></li>
-                    <li class="barraNav__pages__entry"><a href="pages/blogEntry2.html">Articulo2</a></li>
-                </ul>
-            </nav>
-        </header>
+                <!-------HEADER------->
+            <header>
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark navCustom">
+                    <!-- Brand -->
+                    <a class="navbar-brand" href="index.html"><img id="navLogo" src="assets/img/logo_blanco.png" alt="logo shield conquerer"></a>
+                
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="#secHistoria">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#secJuego">Juego</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#secContacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pages/faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pages/blogEntry1.html">Entrada1</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="pages/blogEntry2.html">Entrada2</a>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+            </header>
+    
         <main>
             <!--seccion cabecera-->
-            <section class="cabecera">
-                <img class="cabecera__img" src="assets/img/TemploExterior.png" alt="Cabecera Templo">
-                <img class="cabecera__logo" src="assets/img/logo.png" alt="Logo juego">
+            <section class="jumbotron jumbotron-fluid">
+                <div class="container">
+                </div>
             </section>
     
             <!--Seccion historia-->
@@ -155,5 +181,11 @@
             </div> 
         </footer>
     </div>
+
+    <!--JS BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+
 </body>
 </html>
