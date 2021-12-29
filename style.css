@@ -50,45 +50,23 @@ header{
 }
 
     /*====NAV DESKTOP====*/
-    .barraNav{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        background-color: #0e1114;
-    }
-    
-    .barraNav__logo img{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 40px;
-        width: auto;
-        padding: 1rem;
-        padding-left: 32px;
-    }
-    
-    .barraNav__ul{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+    .navCustom{
+        background-color: #0e1114 !important; 
         font-family: "Apex Light";
         font-size: 22px;
-        padding: 1rem;
     }
-    
-    .barraNav__ul li{
-        padding-left: 2rem;
+
+    .nav-item a{
+        color: #c7e2df !important;
     }
-    
-    .barraNav__ul a{
-        color: #c7e2df;
+
+    .nav-item a:hover{
+        color: #196966 !important;
     }
-    
-    .barraNav__ul a:hover{
-        color: #196966;
+
+    #navLogo{
+        height: 40px;
+        width: auto; 
     }
 
 
@@ -131,66 +109,39 @@ header{
 
 
     /*====CABECERA DESKTOP====*/
-    .cabecera{
+    .jumbotron{
         grid-area: cabecera;
-        height: 780px;
-        width: 100%; 
+        height: 800px;
+        background-image: url(assets/img/TemploExterior.png);
+        background-size: cover;
+        background-position: center;
         overflow: hidden;
     }
-        .cabecera__img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 100% 65%;
-           
-        }
-        .cabecera__logo {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            padding: 3rem;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-        }
 
 
             /*====CABECERA MOBILE====*/
            
-            @media only screen and (max-width:1208px){
+            @media only screen and (max-width:1815px){
 
-                .cabecera{
-                height: 555px;
-                }
-
-                .cabecera__logo {
-                max-width: 400px;
-                top: 350px;
+                .jumbotron{
+                    height: 740px;
                 }
             }
 
-            @media only screen and (max-width:1080px){
+            @media only screen and (max-width:1200px){
 
-               
-
-                .cabecera__logo {
-                max-width: 400px;
-                top: 415px;
+                .jumbotron{
+                    height: 530px;
                 }
             }
 
-            @media only screen and (max-width:710px){
+            @media only screen and (max-width:320px){
 
-                .cabecera{
-                height: 400px;
-                }
-
-                .cabecera__logo {
-                max-width: 250px;
-                top: 375px;
+                .jumbotron{
+                    height: 350px;
                 }
             }
+        
 
 
     /*====SECCION HISTORIA====*/
@@ -208,7 +159,7 @@ header{
         .historia div{
             width: 80%;
             height: auto;
-            margin: 20rem 10% 30rem 10%;
+            margin: 12rem 10% 20rem 10%;
         }
 
         .historia__titulo{
@@ -224,10 +175,11 @@ header{
             padding-top: 25px;
         }
 
-            @media only screen and (max-width:1337px){
+        
+            @media only screen and (max-width:1200px){
 
                 .historia div{
-                    margin: 10rem 10% 10rem 10%;
+                    margin: 5rem 10% 10rem 10%;
                 }
             }
          
@@ -600,8 +552,23 @@ header{
         text-align: center;
         width: 100%;
         height: 100px;
-        padding-top: 200px;
+        padding: 80px 0 80px 0;
     }
+
+    .container-xl{
+        display: flex ;
+        justify-content: center;
+        width: auto;
+        padding: 4rem;
+        background-color: khaki !important;
+    }
+
+    .card-title{
+        font-family:"Apex Light";
+        font-size: 40px;
+        color: #eaf3f2;
+    }
+
     .blogEntrada{
         width: 1000px;
         height: 610px;
