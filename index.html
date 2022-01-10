@@ -61,6 +61,7 @@
             <!--seccion cabecera-->
             <section class="jumbotron jumbotron-fluid">
                 <div class="container">
+                    <div class="container__img"></div>
                 </div>
             </section>
     
@@ -70,7 +71,7 @@
                 <div data-aos="fade-down">
                 <h2 class="historia__titulo">Historia</h2>
                 <p class="historia__texto">
-                    NUALMENTE LOS MEJORES GENERALES DE CADA DIVISIÓN SE ENFRENTAN EN UNA GRAN
+                    ANUALMENTE LOS MEJORES GENERALES DE CADA DIVISIÓN SE ENFRENTAN EN UNA GRAN
                     SIMULACIÓN PARA PONER EN PRUEBA SUS HABILIDADES Y COMPROBAR QUIEN ES EL MEJOR 
                     ESTRATEGA DE TODO EL EJÉRCITO DE NEXCINKS. <br>
                     AQUEL QUE GESTIONE MEJOR SUS RECURSOS Y CONSIGA DESPLEGAR EL ESCUDO
@@ -78,7 +79,7 @@
                     LA NACIÓN A LA MEJOR DIVISIÓN DE ESE AÑO. uN HONOR QUE ANHELA TODO COMBATIENTE. <br>
                     DICHA SIMULACIÓN RECIBE EL NOMBRE DE SHIELD CONQUERER  </p>
                 </div>
-                <div class="historia__imagen"><img src="assets/img/personajes.png" alt="personajes juego"></div>
+                <div class="historia__imagen"><img src="assets/img/personajes.png" class="img-fluid" alt="Responsive image"></div>
                 </section>
             </section>
             <!--Seccion juego-->
@@ -212,6 +213,26 @@
             scroll-behavior: smooth;
         }
     </style>
+
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+    });
+    </script>
 
 </body>
 </html>

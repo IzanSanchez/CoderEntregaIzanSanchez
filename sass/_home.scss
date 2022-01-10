@@ -17,6 +17,13 @@
 }
 */
 
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+   
+}
+
 /*====MAIN====*/
 
 .bodyIndex main{
@@ -42,6 +49,26 @@
         background-size: cover;
         background-position: center;
         overflow: hidden;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        height: auto;
+    } 
+
+    .container__img{
+        background-image: url(assets/img/logo.png);
+        background-size:contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 800px;
+        height: 600px;
+        
     }
 
             /*====CABECERA MOBILE====*/
@@ -51,6 +78,11 @@
                 .jumbotron{
                     height: 740px;
                 }
+
+                .container__img{
+                    width: 800px;
+                    height: 600px;
+                }
             }
 
             @media only screen and (max-width:1200px){
@@ -58,12 +90,22 @@
                 .jumbotron{
                     height: 530px;
                 }
+
+                .container__img{
+                    width: 500px;
+                    height: 400px;
+                }
             }
 
-            @media only screen and (max-width:320px){
+            @media only screen and (max-width:420px){
 
                 .jumbotron{
                     height: 350px;
+                }
+
+                .container__img{
+                    width: 350px;
+                    height: 250px;
                 }
             }
         
@@ -113,14 +155,62 @@
 
             img{
                 width: auto;
-                height: 700px;
+                height: auto;
+                max-height: 700px;
             }
         }
         
+            /*====CABECERA MOBILE====*/
+
             @media only screen and (max-width:1200px){
 
+                .historia{
+                    margin-bottom: 6rem;
+                }
+                
                 .historia div{
-                    margin: 5rem 10% 10rem 10%;
+                    margin: 5rem 10% 0rem 10%;
+                }
+
+                .historia__imagen{
+                    width: 100%;
+                    height: 700px;
+        
+                    img{
+                        width: auto;
+                        height: auto;
+                        max-height: 520px;
+                    }
+                }
+            }
+
+            @media only screen and (max-width:480px){
+
+                .historia{
+                    margin-bottom: 8rem;
+
+                    div{
+                        margin: 1.5rem 10% 0rem 10%;
+                    }
+                }
+                
+                .historia__titulo{
+                    @include textMed($textXM,$ColWhite,$shadowBlueTitle);
+                }
+
+                .historia__texto{
+                    @include textLight($textXS,$ColWhite,$shadowBlueTitle);
+                }
+
+                .historia__imagen{
+                    width: 100%;
+                    height: 700px;
+        
+                    img{
+                        width: auto;
+                        height: auto;
+                        max-height: 620px;
+                    }
                 }
             }
 
@@ -144,7 +234,8 @@
         .juego1{
             grid-area: juego1;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            align-items: center;
             overflow: hidden;
             height: auto;
             @include panelBlueLeft;
@@ -156,9 +247,11 @@
                 height: 500px;
                 padding: 3rem 2rem 2rem 2rem;
                 margin-left: 15%;
+                height: auto;
+                
 
                 h2{
-                    @include textMed($textL,$ColWhite,$shadowBlueTitle);
+                    @include textMed($textXM,$ColWhite,$shadowBlueTitle);
                 }
 
                 p{
@@ -185,7 +278,8 @@
         .juego2{
             grid-area: juego2;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            align-items: center;
             overflow: hidden;
             height: auto;
             @include panelBlueRight;
@@ -197,9 +291,10 @@
                     height: 500px;
                     padding: 3rem 2rem 2rem 2rem;
                     margin-right: 15%;
+                    height: auto;
 
                     h2{
-                        @include textMed($textL,$ColWhite,$shadowBlueTitle);
+                        @include textMed($textXM,$ColWhite,$shadowBlueTitle);
                     }
     
                     p{
@@ -229,8 +324,9 @@
         .juego3{
             grid-area: juego3;
             display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow:hidden;
             height: auto;
             @include panelBlueLeft;
         }
@@ -241,9 +337,10 @@
                     height: 500px;
                     padding: 3rem 2rem 2rem 2rem;
                     margin-left: 15%;
+                    height: auto;
 
                     h2{
-                        @include textMed($textL,$ColWhite,$shadowBlueTitle);
+                        @include textMed($textXM,$ColWhite,$shadowBlueTitle);
                     }
     
                     p{
@@ -299,35 +396,75 @@
 
                 /*====JUEGO MOBILE====*/
                 
-                    @media only screen and (max-width:1337px){
-
-                        .juego1__texto{
-                            height: 400px;
+                    @media only screen and (max-width:1445px){
+                        .juego{
+                            grid-template-columns: 0.1fr 1fr 0.1fr;
                         }
+                        .juego1__texto{
+                            width: 40%;
+                            height: 500px;
+                            padding: 3rem 2rem 2rem 2rem;
+                            margin-left: 6%;
+                            height: auto;
+                        }   
+
                         .juego1__imagen{
-                            width: 350px;
-                            height: 350px;
+                            width: 620px;
+                            height: 480px;
+                            margin: 0px 3% 0 3%;
+                            overflow: hidden;
+
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-height: 450px;
+                            }
                         }
 
                         .juego2__texto{
-                            height: 400px;
-                        }
+                            width: 40%;
+                            height: 500px;
+                            padding: 3rem 2rem 2rem 2rem;
+                            margin-right: 6%;
+                            height: auto;
+                        }   
+
                         .juego2__imagen{
-                            width: 350px;
-                            height: 350px;
+                            width: 620px;
+                            height: 480px;
+                            margin: 0px 3% 0 3%;
+                            overflow: hidden;
+
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-height: 450px;
+                            }
                         }
 
                         .juego3__texto{
-                            height: 400px;
-                        }
+                            width: 40%;
+                            height: 500px;
+                            padding: 3rem 2rem 2rem 2rem;
+                            margin-left: 6%;
+                            height: auto;
+                        }   
+
                         .juego3__imagen{
-                            width: 350px;
-                            height: 350px;
+                            width: 620px;
+                            height: 480px;
+                            margin: 0px 3% 0 3%;
+                            overflow: hidden;
+
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-height: 450px;
+                            }
                         }
-            
                     }
 
-                    @media only screen and (max-width:1085px){
+                    @media only screen and (max-width:1200px){
                         
                         .juego{
                             grid-area: juego;
@@ -346,11 +483,17 @@
 
                     }
 
-                    @media only screen and (max-width:972px){
+                    @media only screen and (max-width:1023px){
 
+                        .juego{
+                            grid-row-gap: 5.2rem;
+                        }
+                        
                         .juego1{
                             justify-content: center;
                             text-align: center;
+                            flex-wrap: wrap;
+                            @include panelBlueFull;
                         }
 
                         .juego1__texto{
@@ -360,32 +503,49 @@
                         }
 
                         .juego1__imagen{
-                            width: 350px;
-                            height: 350px;
-                            margin: 5% 0 5% 0;
+                            width: 620px;
+                            height: 480px;
+                            margin: 0;
+                            overflow: hidden;
+
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-height: 450px;
+                            }
                         }
 
                         .juego2{
-                            flex-wrap: wrap-reverse;
                             justify-content: center;
                             text-align: center;
+                            flex-wrap: wrap-reverse;
+                            @include panelBlueFull;
                         }
 
                         .juego2__texto{
                             height: auto;
                             width: 80%;
-                            margin-right: 0;
+                            margin-left: 0;
                         }
 
                         .juego2__imagen{
-                            width: 350px;
-                            height: 350px;
-                            margin: 5% 0 5% 0;
+                            width: 620px;
+                            height: 480px;
+                            margin: 0;
+                            overflow: hidden;
+
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-height: 450px;
+                            }
                         }
 
                         .juego3{
                             justify-content: center;
                             text-align: center;
+                            flex-wrap: wrap;
+                            @include panelBlueFull;
                         }
 
                         .juego3__texto{
@@ -395,10 +555,130 @@
                         }
 
                         .juego3__imagen{
-                            width: 350px;
-                            height: 350px;
-                            margin: 5% 0 5% 0;
+                            width: 620px;
+                            height: 480px;
+                            margin: 0;
+                            overflow: hidden;
+
+                            img{
+                                width: auto;
+                                height: auto;
+                                max-height: 450px;
+                            }
                         }
+
+                    @media only screen and (max-width:600px){
+                        .juego1__imagen{
+                            width: 100%;
+                            height: auto;
+                            margin: 0px;
+
+                            img{
+                                width: auto;
+                                height: 300px;
+                                
+                            }
+                        }
+
+                        .juego2__imagen{
+                            width: 100%;
+                            height: auto;
+                            margin: 0px;
+
+                            img{
+                                width: auto;
+                                height: 300px;
+                                
+                            }
+                        }
+
+                        .juego3__imagen{
+                            width: 100%;
+                            height: auto;
+                            margin: 0px;
+
+                            img{
+                                width: auto;
+                                height: 300px;
+                                
+                            }
+                        }
+                    }
+
+                    @media only screen and (max-width:480px){
+                        
+                        .juego1__texto{
+
+                            h2{
+                                @include textMed($textM,$ColWhite,$shadowBlueTitle);
+                            }
+
+                            p{
+                                margin-top: 1.3rem;
+                                @include textLight($textXS,$ColWhite,$shadowBlueText);
+                            }
+                        }
+                        
+                        .juego1__imagen{
+                            width: 100%;
+                            height: auto;
+                            margin: 0px 0px 1rem 0px;
+
+                            img{
+                                width: auto;
+                                height: 220px;
+                                
+                            }
+                        }
+
+                        .juego2__texto{
+
+                            h2{
+                                @include textMed($textM,$ColWhite,$shadowBlueTitle);
+                            }
+
+                            p{
+                                margin-top: 1.3rem;
+                                @include textLight($textXS,$ColWhite,$shadowBlueText);
+                            }
+                        }
+                        
+                        .juego2__imagen{
+                            width: 100%;
+                            height: auto;
+                            margin: 0px 0px 1rem 0px;
+
+                            img{
+                                width: auto;
+                                height: 220px;
+                                
+                            }
+                        }
+
+                        .juego3__texto{
+
+                            h2{
+                                @include textMed($textM,$ColWhite,$shadowBlueTitle);
+                            }
+
+                            p{
+                                margin-top: 1.3rem;
+                                @include textLight($textXS,$ColWhite,$shadowBlueText);
+                            }
+                        }
+                        
+                        .juego3__imagen{
+                            width: 100%;
+                            height: auto;
+                            margin: 0px 0px 1rem 0px;
+
+                            img{
+                                width: auto;
+                                height: 220px;
+                                
+                            }
+                        }
+                    }
 
                     }
 

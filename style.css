@@ -201,6 +201,12 @@ footer {
     ;
 }
 */
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
 /*====MAIN====*/
 .bodyIndex main {
   /*grid-area: IndexMain;*/
@@ -220,6 +226,25 @@ footer {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  height: auto;
+}
+
+.container__img {
+  background-image: url(assets/img/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 800px;
+  height: 600px;
 }
 
 /*====CABECERA MOBILE====*/
@@ -227,15 +252,30 @@ footer {
   .jumbotron {
     height: 740px;
   }
+
+  .container__img {
+    width: 800px;
+    height: 600px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .jumbotron {
     height: 530px;
   }
+
+  .container__img {
+    width: 500px;
+    height: 400px;
+  }
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 420px) {
   .jumbotron {
     height: 350px;
+  }
+
+  .container__img {
+    width: 350px;
+    height: 250px;
   }
 }
 /*====SECCION HISTORIA====*/
@@ -288,12 +328,60 @@ footer {
 }
 .historia__imagen img {
   width: auto;
-  height: 700px;
+  height: auto;
+  max-height: 700px;
 }
 
+/*====CABECERA MOBILE====*/
 @media only screen and (max-width: 1200px) {
+  .historia {
+    margin-bottom: 6rem;
+  }
+
   .historia div {
-    margin: 5rem 10% 10rem 10%;
+    margin: 5rem 10% 0rem 10%;
+  }
+
+  .historia__imagen {
+    width: 100%;
+    height: 700px;
+  }
+  .historia__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 520px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .historia {
+    margin-bottom: 8rem;
+  }
+  .historia div {
+    margin: 1.5rem 10% 0rem 10%;
+  }
+
+  .historia__titulo {
+    font-family: "Apex Med";
+    font-size: 2.3rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+  }
+
+  .historia__texto {
+    font-family: "Apex Light";
+    font-size: 16px;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+  }
+
+  .historia__imagen {
+    width: 100%;
+    height: 700px;
+  }
+  .historia__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 620px;
   }
 }
 /*====SECCION JUEGO====*/
@@ -311,7 +399,8 @@ footer {
 .juego1 {
   grid-area: juego1;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   overflow: hidden;
   height: auto;
   background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
@@ -328,10 +417,11 @@ footer {
   height: 500px;
   padding: 3rem 2rem 2rem 2rem;
   margin-left: 15%;
+  height: auto;
 }
 .juego1__texto h2 {
   font-family: "Apex Med";
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
 }
@@ -358,7 +448,8 @@ footer {
 .juego2 {
   grid-area: juego2;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   overflow: hidden;
   height: auto;
   background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
@@ -375,10 +466,11 @@ footer {
   height: 500px;
   padding: 3rem 2rem 2rem 2rem;
   margin-right: 15%;
+  height: auto;
 }
 .juego2__texto h2 {
   font-family: "Apex Med";
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
 }
@@ -414,7 +506,8 @@ footer {
 .juego3 {
   grid-area: juego3;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: nowrap;
   overflow: hidden;
   height: auto;
   background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
@@ -431,10 +524,11 @@ footer {
   height: 500px;
   padding: 3rem 2rem 2rem 2rem;
   margin-left: 15%;
+  height: auto;
 }
 .juego3__texto h2 {
   font-family: "Apex Med";
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
 }
@@ -490,35 +584,72 @@ footer {
 }
 
 /*====JUEGO MOBILE====*/
-@media only screen and (max-width: 1337px) {
+@media only screen and (max-width: 1445px) {
+  .juego {
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+  }
+
   .juego1__texto {
-    height: 400px;
+    width: 40%;
+    height: 500px;
+    padding: 3rem 2rem 2rem 2rem;
+    margin-left: 6%;
+    height: auto;
   }
 
   .juego1__imagen {
-    width: 350px;
-    height: 350px;
+    width: 620px;
+    height: 480px;
+    margin: 0px 3% 0 3%;
+    overflow: hidden;
+  }
+  .juego1__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 450px;
   }
 
   .juego2__texto {
-    height: 400px;
+    width: 40%;
+    height: 500px;
+    padding: 3rem 2rem 2rem 2rem;
+    margin-right: 6%;
+    height: auto;
   }
 
   .juego2__imagen {
-    width: 350px;
-    height: 350px;
+    width: 620px;
+    height: 480px;
+    margin: 0px 3% 0 3%;
+    overflow: hidden;
+  }
+  .juego2__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 450px;
   }
 
   .juego3__texto {
-    height: 400px;
+    width: 40%;
+    height: 500px;
+    padding: 3rem 2rem 2rem 2rem;
+    margin-left: 6%;
+    height: auto;
   }
 
   .juego3__imagen {
-    width: 350px;
-    height: 350px;
+    width: 620px;
+    height: 480px;
+    margin: 0px 3% 0 3%;
+    overflow: hidden;
+  }
+  .juego3__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 450px;
   }
 }
-@media only screen and (max-width: 1085px) {
+@media only screen and (max-width: 1200px) {
   .juego {
     grid-area: juego;
     width: 100%;
@@ -530,10 +661,23 @@ footer {
     grid-template-areas: "juego1" "juego2" "juego3" "juego4";
   }
 }
-@media only screen and (max-width: 972px) {
+@media only screen and (max-width: 1023px) {
+  .juego {
+    grid-row-gap: 5.2rem;
+  }
+
   .juego1 {
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+    background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+    background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+    background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+    border-top: 9px solid #1c7d78;
+    border-left: 9px solid #1c7d78;
+    border-right: 9px solid #1c7d78;
+    border-bottom: 9px solid #1c7d78;
+    border-radius: 15px 15px 15px 15px;
   }
 
   .juego1__texto {
@@ -543,32 +687,61 @@ footer {
   }
 
   .juego1__imagen {
-    width: 350px;
-    height: 350px;
-    margin: 5% 0 5% 0;
+    width: 620px;
+    height: 480px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .juego1__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 450px;
   }
 
   .juego2 {
-    flex-wrap: wrap-reverse;
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap-reverse;
+    background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+    background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+    background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+    border-top: 9px solid #1c7d78;
+    border-left: 9px solid #1c7d78;
+    border-right: 9px solid #1c7d78;
+    border-bottom: 9px solid #1c7d78;
+    border-radius: 15px 15px 15px 15px;
   }
 
   .juego2__texto {
     height: auto;
     width: 80%;
-    margin-right: 0;
+    margin-left: 0;
   }
 
   .juego2__imagen {
-    width: 350px;
-    height: 350px;
-    margin: 5% 0 5% 0;
+    width: 620px;
+    height: 480px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .juego2__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 450px;
   }
 
   .juego3 {
     justify-content: center;
     text-align: center;
+    flex-wrap: wrap;
+    background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+    background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+    background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+    border-top: 9px solid #1c7d78;
+    border-left: 9px solid #1c7d78;
+    border-right: 9px solid #1c7d78;
+    border-bottom: 9px solid #1c7d78;
+    border-radius: 15px 15px 15px 15px;
   }
 
   .juego3__texto {
@@ -578,9 +751,119 @@ footer {
   }
 
   .juego3__imagen {
-    width: 350px;
-    height: 350px;
-    margin: 5% 0 5% 0;
+    width: 620px;
+    height: 480px;
+    margin: 0;
+    overflow: hidden;
+  }
+  .juego3__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 450px;
+  }
+}
+@media only screen and (max-width: 1023px) and (max-width: 600px) {
+  .juego1__imagen {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+  .juego1__imagen img {
+    width: auto;
+    height: 300px;
+  }
+
+  .juego2__imagen {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+  .juego2__imagen img {
+    width: auto;
+    height: 300px;
+  }
+
+  .juego3__imagen {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+  .juego3__imagen img {
+    width: auto;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 1023px) and (max-width: 480px) {
+  .juego1__texto h2 {
+    font-family: "Apex Med";
+    font-size: 1.5rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+  }
+  .juego1__texto p {
+    margin-top: 1.3rem;
+    font-family: "Apex Light";
+    font-size: 16px;
+    color: #c7e2df;
+    text-shadow: 2px 2px 3px #1a6864;
+  }
+
+  .juego1__imagen {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 1rem 0px;
+  }
+  .juego1__imagen img {
+    width: auto;
+    height: 220px;
+  }
+
+  .juego2__texto h2 {
+    font-family: "Apex Med";
+    font-size: 1.5rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+  }
+  .juego2__texto p {
+    margin-top: 1.3rem;
+    font-family: "Apex Light";
+    font-size: 16px;
+    color: #c7e2df;
+    text-shadow: 2px 2px 3px #1a6864;
+  }
+
+  .juego2__imagen {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 1rem 0px;
+  }
+  .juego2__imagen img {
+    width: auto;
+    height: 220px;
+  }
+
+  .juego3__texto h2 {
+    font-family: "Apex Med";
+    font-size: 1.5rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+  }
+  .juego3__texto p {
+    margin-top: 1.3rem;
+    font-family: "Apex Light";
+    font-size: 16px;
+    color: #c7e2df;
+    text-shadow: 2px 2px 3px #1a6864;
+  }
+
+  .juego3__imagen {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 1rem 0px;
+  }
+  .juego3__imagen img {
+    width: auto;
+    height: 220px;
   }
 }
 .contacto {
@@ -657,11 +940,14 @@ footer {
   text-align: left;
   border: none;
   outline: none;
-  transition: 0.4s;
+  transition: 0.2s;
+  z-index: 2;
 }
 
 .active, .accordion:hover {
   background-color: #1b1d1f;
+  border: 2px solid #196966;
+  border-radius: 8px;
 }
 
 .accordion:after {
@@ -685,6 +971,11 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  border-bottom: 2px solid #196966;
+  border-left: 2px solid #196966;
+  border-right: 2px solid #196966;
+  border-radius: 0px 0px 8px 8px;
+  z-index: 1;
 }
 .panel p {
   font-family: "Apex Light";
