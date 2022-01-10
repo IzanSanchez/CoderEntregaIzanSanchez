@@ -1,0 +1,106 @@
+//===VARIABLES Y MIXINS===
+
+//color texto
+$ColWhite: #c7e2df;
+$ColBlueHover: #196966;
+
+//Tamaños textos
+$textXL: 4rem;
+$textL: 3rem;
+$textM: 1.5rem;
+$textS: 1.2rem;
+$textXS: 14px;
+
+//Shadow textos
+$shadowBlueTitle: 3px 3px 3px rgba(26, 104, 100, 1);
+$shadowBlueText: 2px 2px 3px rgba(26, 104, 100, 1);
+
+//Animaciones
+//filtro blanco y negro con grow, se aplica en la imagen
+@mixin animBnGrow {
+  transition: all .3s ease-in-out;
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%); 
+}
+//se aplica en el :hover de la imagen
+@mixin animBnGrowHover {
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%); 
+  transform: scale(1.1);
+}
+
+//Elementos Custom
+//fondo azul de la sección "juego"
+@mixin panelBlueLeft {
+  background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+  border-top: 9px solid #1c7d78;
+  border-right: 9px solid #1c7d78;
+  border-bottom: 9px solid #1c7d78;
+  border-radius: 0px 15px 15px 0px;
+}
+
+@mixin panelBlueRight {
+  background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+  border-top: 9px solid #1c7d78;
+  border-left: 9px solid #1c7d78;
+  border-bottom: 9px solid #1c7d78;
+  border-radius: 15px 0px 0px 15px;
+}
+
+@mixin panelBlueFull {
+  background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+  border-top: 9px solid #1c7d78;
+  border-left: 9px solid #1c7d78;
+  border-right: 9px solid #1c7d78;
+  border-bottom: 9px solid #1c7d78;
+  border-radius: 15px 15px 15px 15px;
+}
+
+//tipos de texto
+@mixin textMed($textSize,$textColor,$textShadow) {
+  font-family: "Apex Med";
+  font-size: $textSize;
+  color: $textColor;
+  text-shadow: $textShadow;
+}
+
+@mixin textLight($textSize,$textColor,$textShadow) {
+  font-family: "Apex Light";
+  font-size: $textSize;
+  color: $textColor;
+  text-shadow: $textShadow;
+}
+
+/*=======================*/
+/*====GENERAL SETTINGS===*/
+/*=======================*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  * a {
+    text-decoration: none;
+  }
+  
+  * ul {
+    list-style-type: none;
+  }
+
+
+/*====FONTS====*/
+  @font-face {
+    font-family: Apex Med;
+    src: url(assets/fonts/Apex\ Mk3-Medium.otf);
+  }
+  @font-face {
+    font-family: Apex Light;
+    src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
+  } 

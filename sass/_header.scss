@@ -1,0 +1,25 @@
+header{
+    /*grid-area: header;*/
+    width: 100%;
+    height: auto;
+}
+
+    /*====NAV DESKTOP====*/
+    .navCustom{
+        background-color: #0e1114 !important; 
+        font-family: "Apex Light";
+        font-size: 22px;
+    }
+
+    .nav-item a{
+        color: $ColWhite !important;
+    }
+
+    .nav-item a:hover{
+        color: $ColBlueHover !important;
+    }
+
+    #navLogo{
+        height: 40px;
+        width: auto; 
+    }

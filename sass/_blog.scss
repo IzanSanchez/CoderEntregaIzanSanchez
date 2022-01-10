@@ -1,0 +1,52 @@
+/*======================*/
+/*=========BLOG=========*/
+/*======================*/
+.bodyBlog{
+    background-image: url(assets/img/BG.png);
+    background-size:cover;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "bodyBlog"
+    "footer";
+
+    main{
+        grid-area: bodyBlog;
+        margin: 6rem 10% 8rem 10%; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+}
+
+    .blogH2{
+        @include textMed($textXL,$ColWhite,$shadowBlueText);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+
+    .container-xl{
+        display: flex ;
+        justify-content: center;
+        width: auto;
+        padding: 2rem 4rem 4rem 4rem;
+    }
+
+    .card-title{
+        @include textMed($textM,$ColWhite,$shadowBlueText);
+    }
+
+    .card-text{
+        @include textLight($textS,$ColWhite,0);
+    }
+
+    .btn-secondary{
+        @include textLight($textS,$ColWhite,0);
+    }

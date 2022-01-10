@@ -1,82 +1,194 @@
+@charset "UTF-8";
+/*=======================*/
 /*====GENERAL SETTINGS===*/
-
-*{
-    padding: 0px;
-    margin: 0px;
+/*=======================*/
+* {
+  padding: 0px;
+  margin: 0px;
 }
 
-* a{
-    text-decoration: none;
+* a {
+  text-decoration: none;
 }
 
-* ul{
-    list-style-type: none;
-}
-
-h2{
-  font-family:"Apex Med";
-
-  font-size: 3rem;
-  color: #c7e2df;
-}
-p{
-  font-family:"Apex Light";
-  font-size: 1.5rem;
-  color: #c7e2df;
+* ul {
+  list-style-type: none;
 }
 
 /*====FONTS====*/
-
 @font-face {
   font-family: Apex Med;
   src: url(assets/fonts/Apex\ Mk3-Medium.otf);
 }
-
 @font-face {
   font-family: Apex Light;
   src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
 }
-
-
-/*======================*/
-/*=========INDEX=========*/
-/*======================*/
-
-
-header{
-    /*grid-area: header;*/
-    width: 100%;
-    height: auto;
+header {
+  /*grid-area: header;*/
+  width: 100%;
+  height: auto;
 }
 
-    /*====NAV DESKTOP====*/
-    .navCustom{
-        background-color: #0e1114 !important; 
-        font-family: "Apex Light";
-        font-size: 22px;
-    }
+/*====NAV DESKTOP====*/
+.navCustom {
+  background-color: #0e1114 !important;
+  font-family: "Apex Light";
+  font-size: 22px;
+}
 
-    .nav-item a{
-        color: #c7e2df !important;
-    }
+.nav-item a {
+  color: #c7e2df !important;
+}
 
-    .nav-item a:hover{
-        color: #196966 !important;
-    }
+.nav-item a:hover {
+  color: #196966 !important;
+}
 
-    #navLogo{
-        height: 40px;
-        width: auto; 
-    }
+#navLogo {
+  height: 40px;
+  width: auto;
+}
 
+/*======================*/
+/*=========FOOTER=========*/
+/*======================*/
+footer {
+  /*grid-area: footer;*/
+  width: 100%;
+  height: auto;
+}
 
+/*====FOOTER DESKTOP====*/
+.gridFooter {
+  display: grid;
+  background-color: #0e1114;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+  grid-template-columns: repeat(3) 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "legal logo rrss";
+}
 
+.gridFooter a {
+  color: #889b99;
+}
+
+.gridFooter a:hover {
+  color: #4e5858;
+}
+
+/*==logo==*/
+.gridFooter__logo {
+  grid-area: logo;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.gridFooter__logo img {
+  margin: 10px 0px 0px 0px;
+  padding: 1rem;
+  width: 300px;
+  height: auto;
+}
+
+/*==legal==*/
+.gridFooter__legal {
+  grid-area: legal;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.gridFooter__legal ul {
+  margin: 30px 0px 0px 0px;
+  padding: 1rem;
+  width: 150px;
+  height: fit-content;
+}
+
+/*==rrss==*/
+.gridFooter__rrss {
+  grid-area: rrss;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.gridFooter__rrss ul {
+  margin: 30px 0px 0px 0px;
+  padding: 1rem;
+  width: 150px;
+  height: fit-content;
+  text-align: end;
+}
+
+/*====FOOTER MOBILE====*/
+@media only screen and (max-width: 710px) {
+  .gridFooter {
+    display: grid;
+    background-color: #0e1114;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "logo logo" "legal rrss";
+  }
+
+  /*==logo==*/
+  .gridFooter__logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gridFooter__logo img {
+    margin: 10px 0px 0px 0px;
+    padding: 1rem;
+    width: 300px;
+    height: auto;
+  }
+
+  /*==legal==*/
+  .gridFooter__legal {
+    grid-area: legal;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gridFooter__legal ul {
+    margin: 30px 0px 0px 0px;
+    height: 150px;
+    width: fit-content;
+    padding: 1rem;
+  }
+
+  /*==rrss==*/
+  .gridFooter__rrss {
+    grid-area: rrss;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gridFooter__rrss ul {
+    margin: 30px 0px 0px 0px;
+    height: 150px;
+    width: fit-content;
+    padding: 1rem;
+    text-align: end;
+  }
+}
 /*======================*/
 /*=========INDEX=========*/
 /*======================*/
-
 /*====BODY====*/
-
 /*
 .bodyIndex{
     display: grid;
@@ -89,761 +201,662 @@ header{
     ;
 }
 */
-
 /*====MAIN====*/
-
-.bodyIndex main{
-    /*grid-area: IndexMain;*/
-    background-image: url(assets/img/BG.png);
-    background-size:cover;
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-template-columns: 100%;
-    grid-template-areas:
-    "cabecera" 
-    "historia"
-    "juego"
-    "contacto"
-    ;
+.bodyIndex main {
+  /*grid-area: IndexMain;*/
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 100%;
+  grid-template-areas: "cabecera" "historia" "juego" "contacto";
 }
 
+/*====CABECERA DESKTOP====*/
+.jumbotron {
+  grid-area: cabecera;
+  height: 800px;
+  background-image: url(assets/img/TemploExterior.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
 
-    /*====CABECERA DESKTOP====*/
-    .jumbotron{
-        grid-area: cabecera;
-        height: 800px;
-        background-image: url(assets/img/TemploExterior.png);
-        background-size: cover;
-        background-position: center;
-        overflow: hidden;
-    }
+/*====CABECERA MOBILE====*/
+@media only screen and (max-width: 1815px) {
+  .jumbotron {
+    height: 740px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .jumbotron {
+    height: 530px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .jumbotron {
+    height: 350px;
+  }
+}
+/*====SECCION HISTORIA====*/
+.historia {
+  grid-area: historia;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 15rem;
+}
 
+.historia div {
+  width: 80%;
+  height: auto;
+  margin: 12rem 10% -6rem 10%;
+}
 
-            /*====CABECERA MOBILE====*/
-           
-            @media only screen and (max-width:1815px){
+.historia__titulo {
+  font-family: "Apex Med";
+  font-size: 4rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
 
-                .jumbotron{
-                    height: 740px;
-                }
-            }
+.historia__texto {
+  font-family: "Apex Light";
+  font-size: 1.5rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25px;
+}
 
-            @media only screen and (max-width:1200px){
+.historia__imagen {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.historia__imagen img {
+  width: auto;
+  height: 700px;
+}
 
-                .jumbotron{
-                    height: 530px;
-                }
-            }
+@media only screen and (max-width: 1200px) {
+  .historia div {
+    margin: 5rem 10% 10rem 10%;
+  }
+}
+/*====SECCION JUEGO====*/
+.juego {
+  grid-area: juego;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-row-gap: 5rem;
+  grid-template-areas: "juego1 juego1 ." ". juego2 juego2" "juego3 juego3 ." "juego4 juego4 juego4";
+}
 
-            @media only screen and (max-width:320px){
+.juego1 {
+  grid-area: juego1;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: auto;
+  background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+  border-top: 9px solid #1c7d78;
+  border-right: 9px solid #1c7d78;
+  border-bottom: 9px solid #1c7d78;
+  border-radius: 0px 15px 15px 0px;
+}
 
-                .jumbotron{
-                    height: 350px;
-                }
-            }
-        
+.juego1__texto {
+  width: 30%;
+  height: 500px;
+  padding: 3rem 2rem 2rem 2rem;
+  margin-left: 15%;
+}
+.juego1__texto h2 {
+  font-family: "Apex Med";
+  font-size: 3rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+}
+.juego1__texto p {
+  margin-top: 1.3rem;
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+}
 
+.juego1__imagen {
+  width: 680px;
+  height: 514px;
+  margin: 0px 0 0 4%;
+  overflow: hidden;
+}
+.juego1__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    /*====SECCION HISTORIA====*/
+.juego2 {
+  grid-area: juego2;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: auto;
+  background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+  border-top: 9px solid #1c7d78;
+  border-left: 9px solid #1c7d78;
+  border-bottom: 9px solid #1c7d78;
+  border-radius: 15px 0px 0px 15px;
+}
 
-    .historia{
-        grid-area: historia;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-    }
+.juego2__texto {
+  width: 30%;
+  height: 500px;
+  padding: 3rem 2rem 2rem 2rem;
+  margin-right: 15%;
+}
+.juego2__texto h2 {
+  font-family: "Apex Med";
+  font-size: 3rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+}
+.juego2__texto p {
+  margin-top: 1.3rem;
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+}
 
-        .historia div{
-            width: 80%;
-            height: auto;
-            margin: 12rem 10% 20rem 10%;
-        }
+.juego2__imagen {
+  width: 680px;
+  height: 514px;
+  margin: 0px 0 0 4%;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.juego2__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-        .historia__titulo{
-            text-align: center;
-            width: 100%;
-            height: auto;
-        }
+.juego2__imagen:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
 
-        .historia__texto{
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            padding-top: 25px;
-        }
+.juego3 {
+  grid-area: juego3;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: auto;
+  background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: -webkit-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
+  background: linear-gradient(to bottom, #00292880 0%, #22626181 50%, #00292881 100%);
+  border-top: 9px solid #1c7d78;
+  border-right: 9px solid #1c7d78;
+  border-bottom: 9px solid #1c7d78;
+  border-radius: 0px 15px 15px 0px;
+}
 
-        
-            @media only screen and (max-width:1200px){
+.juego3__texto {
+  width: 30%;
+  height: 500px;
+  padding: 3rem 2rem 2rem 2rem;
+  margin-left: 15%;
+}
+.juego3__texto h2 {
+  font-family: "Apex Med";
+  font-size: 3rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+}
+.juego3__texto p {
+  margin-top: 1.3rem;
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+}
 
-                .historia div{
-                    margin: 5rem 10% 10rem 10%;
-                }
-            }
-         
+.juego3__imagen {
+  width: 680px;
+  height: 514px;
+  margin: 0px 0 0 4%;
+  overflow: hidden;
+}
 
-    /*====SECCION JUEGO====*/        
+.juego3__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .juego{
-        grid-area: juego;
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: 0.2fr 1fr 0.2fr;
-        grid-row-gap: 3rem;
-        grid-template-areas:
-        "juego1 juego1 ."
-        ". juego2 juego2"
-        "juego3 juego3 ."
-        "juego4 juego4 juego4";
-    }
+.juego4 {
+  grid-area: juego4;
+  height: 780px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
-    .juego p{
-        font-size: 20px;
-    }
+.juego4__texto {
+  margin: 250px 10% 0 10%;
+  padding: 3%;
+  position: absolute;
+  width: auto;
+  max-width: 600px;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(37, 47, 54, 0.26);
+}
 
-        .juego1{
-            grid-area: juego1;
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            height: auto;
-            background-color: darkslategray;
-        }
+.juego4__img {
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 65%;
+}
 
+/*====JUEGO MOBILE====*/
+@media only screen and (max-width: 1337px) {
+  .juego1__texto {
+    height: 400px;
+  }
 
-            .juego1__texto{
-                width: 30%;
-                height: 500px;
-                padding: 3rem 2rem 2rem 2rem;
-                margin-left: 15%;
-            }
+  .juego1__imagen {
+    width: 350px;
+    height: 350px;
+  }
 
+  .juego2__texto {
+    height: 400px;
+  }
 
-            .juego1__imagen{
-                width: 450px;
-                height: 450px;
-                margin: 60px 0 0 3.5%;
-                overflow: hidden;
-                transition: all .2s ease-in-out;
-            }
+  .juego2__imagen {
+    width: 350px;
+    height: 350px;
+  }
 
-            .juego1__imagen img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+  .juego3__texto {
+    height: 400px;
+  }
 
-            .juego1__imagen:hover { transform: scale(1.1); }
+  .juego3__imagen {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 1085px) {
+  .juego {
+    grid-area: juego;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.5rem;
+    grid-template-areas: "juego1" "juego2" "juego3" "juego4";
+  }
+}
+@media only screen and (max-width: 972px) {
+  .juego1 {
+    justify-content: center;
+    text-align: center;
+  }
 
-        .juego2{
-            grid-area: juego2;
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            height: auto;
-            background-color: darkslategray;
-        }
-    
-    
-                .juego2__texto{
-                    width: 30%;
-                    height: 500px;
-                    padding: 3rem 2rem 2rem 2rem;
-                    margin-right: 15%;
-                }
-    
-                .juego2__imagen{
-                    width: 450px;
-                    height: 450px;
-                    margin: 60px 1.5% 0 3.5%;
-                    overflow: hidden;
-                    /*filtro blanco y negro*/
-                    transition: all .3s ease-in-out;
-                    -webkit-filter: grayscale(100%); 
-                    filter: grayscale(100%); 
-                }
+  .juego1__texto {
+    height: auto;
+    width: 80%;
+    margin-left: 0;
+  }
 
-                .juego2__imagen:hover {
-                    -webkit-filter: grayscale(0%); 
-                    filter: grayscale(0%); 
-                    transform: scale(1.1);
-                  }
-    
-                .juego2__imagen img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-    
-                }
+  .juego1__imagen {
+    width: 350px;
+    height: 350px;
+    margin: 5% 0 5% 0;
+  }
 
-        .juego3{
-            grid-area: juego3;
-            display: flex;
-            flex-wrap: wrap;
-            overflow: hidden;
-            height: auto;
-            background-color: darkslategray;
-        }
-        
-        
-                .juego3__texto{
-                    width: 30%;
-                    height: 500px;
-                    padding: 3rem 2rem 2rem 2rem;
-                    margin-left: 15%;
-                }
-        
-        
-                .juego3__imagen{
-                    width: 450px;
-                    height: 450px;
-                    margin: 60px 0 0 3.5%;
-                    overflow: hidden;
-                }
-        
-                .juego3__imagen img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-        
-                }
+  .juego2 {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    text-align: center;
+  }
 
+  .juego2__texto {
+    height: auto;
+    width: 80%;
+    margin-right: 0;
+  }
 
-        .juego4{
-            grid-area: juego4;
-            height: 780px;
-            width: 100%; 
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
+  .juego2__imagen {
+    width: 350px;
+    height: 350px;
+    margin: 5% 0 5% 0;
+  }
 
-                .juego4__texto{
-                    margin: 250px 10% 0 10%;
-                    padding: 3%;
-                    position: absolute;
-                    width: auto;
-                    max-width: 600px;
-                    text-align: center;
-                    z-index: 1;
-                    background-color: rgba(37, 47, 54, 0.26);
-                }
-                .juego4__img{
-                    filter: blur(7px);
-                    -webkit-filter: blur(7px);
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: 100% 65%;
-                }
+  .juego3 {
+    justify-content: center;
+    text-align: center;
+  }
 
+  .juego3__texto {
+    height: auto;
+    width: 80%;
+    margin-left: 0;
+  }
 
-                 /*====JUEGO MOBILE====*/
-           
-                    @media only screen and (max-width:1337px){
-
-                        .juego1__texto{
-                            height: 400px;
-                        }
-                        .juego1__imagen{
-                            width: 350px;
-                            height: 350px;
-                        }
-
-                        .juego2__texto{
-                            height: 400px;
-                        }
-                        .juego2__imagen{
-                            width: 350px;
-                            height: 350px;
-                        }
-
-                        .juego3__texto{
-                            height: 400px;
-                        }
-                        .juego3__imagen{
-                            width: 350px;
-                            height: 350px;
-                        }
-            
-                    }
-
-                    @media only screen and (max-width:1085px){
-                        
-                        .juego{
-                            grid-area: juego;
-                            width: 100%;
-                            height: auto;
-                            display: grid;
-                            grid-template-rows: repeat(4, auto);
-                            grid-template-columns: 1fr;
-                            grid-row-gap: 1.5rem;
-                            grid-template-areas:
-                            "juego1"
-                            "juego2"
-                            "juego3"
-                            "juego4";
-                        }
-
-                    }
-
-                    @media only screen and (max-width:972px){
-
-                        .juego1{
-                            justify-content: center;
-                            text-align: center;
-                        }
-
-                        .juego1__texto{
-                            height: auto;
-                            width: 80%;
-                            margin-left: 0;
-                        }
-
-                        .juego1__imagen{
-                            width: 350px;
-                            height: 350px;
-                            margin: 5% 0 5% 0;
-                        }
-
-                        .juego2{
-                            flex-wrap: wrap-reverse;
-                            justify-content: center;
-                            text-align: center;
-                        }
-
-                        .juego2__texto{
-                            height: auto;
-                            width: 80%;
-                            margin-right: 0;
-                        }
-
-                        .juego2__imagen{
-                            width: 350px;
-                            height: 350px;
-                            margin: 5% 0 5% 0;
-                        }
-
-                        .juego3{
-                            justify-content: center;
-                            text-align: center;
-                        }
-
-                        .juego3__texto{
-                            height: auto;
-                            width: 80%;
-                            margin-left: 0;
-                        }
-
-                        .juego3__imagen{
-                            width: 350px;
-                            height: 350px;
-                            margin: 5% 0 5% 0;
-                        }
-
-                    }
-
-
-    .contacto{
-        grid-area: contacto;
-        width: auto;
-        height: auto;
-        margin: 4rem;
-        padding: 5rem 10% 5rem 10%;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-
+  .juego3__imagen {
+    width: 350px;
+    height: 350px;
+    margin: 5% 0 5% 0;
+  }
+}
+.contacto {
+  grid-area: contacto;
+  width: auto;
+  height: auto;
+  margin: 4rem;
+  padding: 5rem 10% 5rem 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contacto h2 {
+  font-family: "Apex Med";
+  font-size: 3rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+}
+.contacto p {
+  margin-top: 1.3rem;
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+}
 
 /*======================*/
 /*=========FAQ=========*/
 /*======================*/
-
-.bodyFaq{
-    background-image: url(assets/img/BG.png);
-    background-size:cover;
-    overflow-x: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-    "header"
-    "faqMain"
-    "footer";
+.bodyFaq {
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "faqMain" "footer";
 }
 
-    .faq{
-        grid-area: faqMain;
-        margin: 6rem 10% 8rem 10%; 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    .faq h1{
-        font-family:"Apex Med";
-        font-size: 55px;
-        color: #c7e2df;
-        text-align: center;
-        width: 100%;
-        height: 120px;
-        padding-top: 50px;
-    }
-    .faqPregunta{
-        display: flex;
-        width: 90%;
-        height: 80px;
-        padding: 20px;
-        margin: 1rem 0px 1rem 0px;
-        border: 2px solid transparent;
-        border-radius: 8px;
-        overflow: hidden;
-        cursor: pointer;
-        background-color: #232527;
-    }
-    .faqPregunta h2{
-        font-size: 22px;
-        padding-top: 25px;
-        width: 95%;
-    }
-    .faqPregunta img{
-        width: auto;
-        height: 35px;
-        margin-top: 24px;
-    }
+.faq {
+  grid-area: faqMain;
+  margin: 6rem 10% 8rem 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+.faq h1 {
+  font-family: "Apex Med";
+  font-size: 4rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+}
 
-    
-        /*====CABECERA MOBILE====*/
-            
-        @media only screen and (max-width:850px){
-            .faq{
-                margin: 2rem 10% 8rem 10%; 
-            }
-        }
+.accordion {
+  display: flex;
+  align-items: center;
+  background-color: #313436;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-family: "Apex Light";
+  font-size: 1.5rem;
+  color: #c7e2df;
+  text-shadow: 0;
+  margin: 1.5rem 0px 0px 0px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
 
+.active, .accordion:hover {
+  background-color: #1b1d1f;
+}
 
+.accordion:after {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 1.2rem;
+  color: #c7e2df;
+  margin-left: auto;
+}
+
+.active:after {
+  content: "➖";
+  /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  width: 100%;
+  margin: -10px;
+  background-color: #1b1d1f;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.panel p {
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 0;
+  margin: 1.5rem;
+}
+
+/*====CABECERA MOBILE====*/
+@media only screen and (max-width: 850px) {
+  .faq {
+    margin: 2rem 10% 8rem 10%;
+  }
+}
 /*======================*/
 /*=========BLOG=========*/
 /*======================*/
-.bodyBlog main{
-    background-image: url(assets/img/BG.png);
-    background-size:cover;
-    overflow-x: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-    "header"
-    "bodyBlog"
-    "footer";
+.bodyBlog {
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "bodyBlog" "footer";
 }
-    
-    .blogH2{
-        font-family:"Apex Light";
-        font-size: 30px;
-        color: #c7e2df;
-        text-align: center;
-        width: 100%;
-        height: 100px;
-        padding: 80px 0 80px 0;
-    }
+.bodyBlog main {
+  grid-area: bodyBlog;
+  margin: 6rem 10% 8rem 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
 
-    .container-xl{
-        display: flex ;
-        justify-content: center;
-        width: auto;
-        padding: 4rem;
-    }
+.blogH2 {
+  font-family: "Apex Med";
+  font-size: 4rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+}
 
-    .card-title{
-        font-family:"Apex Light";
-        font-size: 40px;
-        color: #eaf3f2;
-    }
+.container-xl {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding: 2rem 4rem 4rem 4rem;
+}
 
-    .blogEntrada{
-        width: 1000px;
-        height: 610px;
-        padding: 50px;
-        margin-left: 400px;
-        margin-top: 45px;
-        background-color: #232527;
-    }
-    .blogEntrada h2{
-        font-size: 42px;
-        text-align: center;
-        text-decoration: underline;
-    }
-    .blogEntrada p{
-        font-size: 22px;
-        margin-top: 30px;
-    }
-    #imagenNoticia{
-        width: auto;
-        height: 300px;
-        margin-top: 30px;
-        margin-left: 230px;
-    }
-    .blogEntrada__link {
-        font-family:"Apex Light";
-        font-size: 25px;
-        margin-top: 30px;
-        text-decoration: none;
-    }
-    .blogEntrada__link a{
-        color: #c7e2df;
-    }
-    .blogEntrada a:hover{
-        color: #196966;
-    }
+.card-title {
+  font-family: "Apex Med";
+  font-size: 1.5rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+}
 
+.card-text {
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 0;
+}
 
+.btn-secondary {
+  font-family: "Apex Light";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 0;
+}
 
 /*==============================*/
 /*=========ENTRADA BLOG=========*/
 /*==============================*/
-
-.bodyBlogEntry main{
-    background-image: url(assets/img/BG.png);
-    background-size:cover;
-    overflow-x: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-    "header"
-    "bodyBlogEntry"
-    "footer";
+.bodyBlogEntry main {
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "bodyBlogEntry" "footer";
 }
 
-    .entrada{
-        grid-area: bodyBlogEntry;
-        margin: 6rem 10% 8rem 10%; 
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: hidden;
-    }
-    .entradaTitulo{
-        font-family:"Apex Light";
-        font-size: 30px;
-        color: #c7e2df;
-        text-align: center;
-        width: 100%;
-        height: 100px;
-        padding: 80px 0 80px 0;
-    }
-    .entradaCuerpo{
-        width: 60%;
-        min-height: 690px;
-        height: auto;
-        padding: 50px;
-        margin-top: 10px;
-        background-color: #232527;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .entradaCuerpo__img{
-        width: auto;
-        height: auto;
-        max-width: 750px;
-        max-height: 400px;
-        margin: 30px 10% 0 10%;
-    }
-    .entradaCuerpo__img img{
-        width: 100%;
-        height: 100%;
-    }
-     .entradaCuerpo__vid{
-        width: auto;
-        height: auto;
-        max-width: 750px;
-        max-height: 400px;
-        margin: 30px 10% 0 10%;
-    }
-    #entradaCuerpo__video{
-        margin-left: 120px; 
-    }
-    .entradaCuerpo p{
-        height: auto;
-        font-size: 22px;
-        margin-top: 30px;
-    }
-    .entradaCuerpo__link{
-        font-family:"Apex Light";
-        font-size: 22px;
-        margin-top: 20px;
-    }
-    .entradaCuerpo__link a{
-        color: #c7e2df;
-    }
-    .entradaCuerpo__link a:hover{
-        color: #196966;
-    }
-    .entradaCuerpo__hora{
-        font-family:"Apex Light";
-        font-size: 17px;
-        color: #8b9e9c;
-        font-style: italic;
-        margin-top: 15px;
-    }        
-
-/*======================*/
-/*=========FOOTER=========*/
-/*======================*/
-
-
-footer{
-    /*grid-area: footer;*/
-    width: 100%;
-    height: auto;
+.entrada {
+  grid-area: bodyBlogEntry;
+  margin: 6rem 10% 8rem 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
 }
 
-    /*====FOOTER DESKTOP====*/
+.entradaTitulo {
+  font-family: "Apex Light";
+  font-size: 30px;
+  color: #c7e2df;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  padding: 80px 0 80px 0;
+}
 
-    .gridFooter {
-        display: grid;
-        background-color: #0e1114;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        overflow: hidden;
-        grid-template-columns: repeat(3) 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-        "legal logo rrss";
+.entradaCuerpo {
+  width: 60%;
+  min-height: 690px;
+  height: auto;
+  padding: 50px;
+  margin-top: 10px;
+  background-color: #232527;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    }
+.entradaCuerpo__img {
+  width: auto;
+  height: auto;
+  max-width: 750px;
+  max-height: 400px;
+  margin: 30px 10% 0 10%;
+}
 
-    .gridFooter a{
-        color: #889b99;
-    }
+.entradaCuerpo__img img {
+  width: 100%;
+  height: 100%;
+}
 
-    .gridFooter a:hover{
-        color: #4e5858;
-    }
+.entradaCuerpo__vid {
+  width: auto;
+  height: auto;
+  max-width: 750px;
+  max-height: 400px;
+  margin: 30px 10% 0 10%;
+}
 
-    /*==logo==*/
+#entradaCuerpo__video {
+  margin-left: 120px;
+}
 
-    .gridFooter__logo { 
-        grid-area: logo; 
-        width: 100%;
-        height: 160px;
-        display: flex;
-        justify-content: center;
-    }
+.entradaCuerpo p {
+  height: auto;
+  font-size: 22px;
+  margin-top: 30px;
+}
 
-            .gridFooter__logo img{
-            margin: 10px 0px 0px 0px;
-            padding: 1rem;
-            width: 300px;
-            height: auto;
-            }
-    
-    /*==legal==*/
-        
-    .gridFooter__legal { 
-        grid-area: legal; 
-        width: 100%;
-        height: 160px;
-        display: flex;
-        justify-content: center;
-        }
+.entradaCuerpo__link {
+  font-family: "Apex Light";
+  font-size: 22px;
+  margin-top: 20px;
+}
 
-            .gridFooter__legal ul{
-            margin: 30px 0px 0px 0px;
-            padding: 1rem;
-            width: 150px;
-            height: fit-content;
-            }
-    
-    /*==rrss==*/
+.entradaCuerpo__link a {
+  color: #c7e2df;
+}
 
-    .gridFooter__rrss { 
-        grid-area: rrss; 
-        width: 100%;
-        height: 160px;
-        display: flex;
-        justify-content: center;
-        }
+.entradaCuerpo__link a:hover {
+  color: #196966;
+}
 
-            .gridFooter__rrss ul{
-            margin: 30px 0px 0px 0px;
-            padding: 1rem;
-            width: 150px;
-            height: fit-content;
-            text-align: end;
-            }
+.entradaCuerpo__hora {
+  font-family: "Apex Light";
+  font-size: 17px;
+  color: #8b9e9c;
+  font-style: italic;
+  margin-top: 15px;
+}
 
-        /*====FOOTER MOBILE====*/
-
-        @media only screen and (max-width:710px){
-
-            .gridFooter {
-                display: grid;
-                background-color: #0e1114;
-                font-family: 'Open Sans', sans-serif;
-                font-weight: 600;
-                font-size: 14px;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-template-areas:
-                "logo logo"
-                "legal rrss";
-            }
-
-            /*==logo==*/
-
-            .gridFooter__logo { 
-                grid-area: logo; 
-                display: flex;
-                justify-content: center;
-            }
-
-                    .gridFooter__logo img{
-                    margin: 10px 0px 0px 0px;
-                    padding: 1rem;
-                    width: 300px;
-                    height: auto;
-                    }
-
-            /*==legal==*/
-
-            .gridFooter__legal { 
-                grid-area: legal;
-                display: flex;
-                justify-content: center;
-            }
-
-                    .gridFooter__legal ul{
-                    margin: 30px 0px 0px 0px;
-                    height: 150px;
-                    width: fit-content;
-                    padding: 1rem;
-                    }
-
-            /*==rrss==*/
-            
-            .gridFooter__rrss { 
-                grid-area: rrss; 
-                display: flex;
-                justify-content: center;
-            }
-
-                    .gridFooter__rrss ul{
-                    margin: 30px 0px 0px 0px;
-                    height: 150px;
-                    width: fit-content;
-                    padding: 1rem;
-                    text-align: end;
-                    }   
-        }
+/*# sourceMappingURL=style.css.map */

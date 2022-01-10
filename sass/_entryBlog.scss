@@ -1,0 +1,90 @@
+/*==============================*/
+/*=========ENTRADA BLOG=========*/
+/*==============================*/
+
+.bodyBlogEntry main{
+    background-image: url(assets/img/BG.png);
+    background-size:cover;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "header"
+    "bodyBlogEntry"
+    "footer";
+}
+
+    .entrada{
+        grid-area: bodyBlogEntry;
+        margin: 6rem 10% 8rem 10%; 
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .entradaTitulo{
+        font-family:"Apex Light";
+        font-size: 30px;
+        color: #c7e2df;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        padding: 80px 0 80px 0;
+    }
+    .entradaCuerpo{
+        width: 60%;
+        min-height: 690px;
+        height: auto;
+        padding: 50px;
+        margin-top: 10px;
+        background-color: #232527;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .entradaCuerpo__img{
+        width: auto;
+        height: auto;
+        max-width: 750px;
+        max-height: 400px;
+        margin: 30px 10% 0 10%;
+    }
+    .entradaCuerpo__img img{
+        width: 100%;
+        height: 100%;
+    }
+    .entradaCuerpo__vid{
+        width: auto;
+        height: auto;
+        max-width: 750px;
+        max-height: 400px;
+        margin: 30px 10% 0 10%;
+    }
+    #entradaCuerpo__video{
+        margin-left: 120px; 
+    }
+    .entradaCuerpo p{
+        height: auto;
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    .entradaCuerpo__link{
+        font-family:"Apex Light";
+        font-size: 22px;
+        margin-top: 20px;
+    }
+    .entradaCuerpo__link a{
+        color: #c7e2df;
+    }
+    .entradaCuerpo__link a:hover{
+        color: #196966;
+    }
+    .entradaCuerpo__hora{
+        font-family:"Apex Light";
+        font-size: 17px;
+        color: #8b9e9c;
+        font-style: italic;
+        margin-top: 15px;
+    }        
