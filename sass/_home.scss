@@ -21,7 +21,6 @@
     position: fixed;
     bottom: 25px;
     right: 25px;
-   
 }
 
 /*====MAIN====*/
@@ -70,45 +69,6 @@
         height: 600px;
         
     }
-
-            /*====CABECERA MOBILE====*/
-
-            @media only screen and (max-width:1815px){
-
-                .jumbotron{
-                    height: 740px;
-                }
-
-                .container__img{
-                    width: 800px;
-                    height: 600px;
-                }
-            }
-
-            @media only screen and (max-width:1200px){
-
-                .jumbotron{
-                    height: 530px;
-                }
-
-                .container__img{
-                    width: 500px;
-                    height: 400px;
-                }
-            }
-
-            @media only screen and (max-width:420px){
-
-                .jumbotron{
-                    height: 350px;
-                }
-
-                .container__img{
-                    width: 350px;
-                    height: 250px;
-                }
-            }
-        
 
     /*====SECCION HISTORIA====*/
 
@@ -159,60 +119,7 @@
                 max-height: 700px;
             }
         }
-        
-            /*====CABECERA MOBILE====*/
 
-            @media only screen and (max-width:1200px){
-
-                .historia{
-                    margin-bottom: 6rem;
-                }
-                
-                .historia div{
-                    margin: 5rem 10% 0rem 10%;
-                }
-
-                .historia__imagen{
-                    width: 100%;
-                    height: 700px;
-        
-                    img{
-                        width: auto;
-                        height: auto;
-                        max-height: 520px;
-                    }
-                }
-            }
-
-            @media only screen and (max-width:480px){
-
-                .historia{
-                    margin-bottom: 8rem;
-
-                    div{
-                        margin: 1.5rem 10% 0rem 10%;
-                    }
-                }
-                
-                .historia__titulo{
-                    @include textMed($textXM,$ColWhite,$shadowBlueTitle);
-                }
-
-                .historia__texto{
-                    @include textLight($textXS,$ColWhite,$shadowBlueTitle);
-                }
-
-                .historia__imagen{
-                    width: 100%;
-                    height: 700px;
-        
-                    img{
-                        width: auto;
-                        height: auto;
-                        max-height: 620px;
-                    }
-                }
-            }
 
     /*====SECCION JUEGO====*/        
 
@@ -366,7 +273,7 @@
 
         .juego4{
             grid-area: juego4;
-            height: 780px;
+            height: 1016px;
             width: 100%; 
             overflow: hidden;
             display: flex;
@@ -375,15 +282,38 @@
         }
 
                 .juego4__texto{
-                    margin: 250px 10% 0 10%;
+                    margin: 0px 3% 0px 3%;
                     padding: 3%;
                     position: absolute;
                     width: auto;
-                    max-width: 600px;
-                    text-align: center;
+                    height: auto;
+                    max-width: 1000px;
                     z-index: 1;
-                    background-color: rgba(37, 47, 54, 0.26);
+
+                    h2{
+                        margin-bottom: 35px;
+                        @include textMed($textXM,$ColWhite,$shadowBrownTitle); 
+                    }
+
+                    p{
+                        margin-top: 35px;
+                        @include textLight($textS,$ColWhite,$shadowBrownText);
+                    }
                 }
+
+                .juego4__textoImg{
+                    max-width: 880px;
+                    width: auto;
+                    height: auto;
+                    overflow: hidden;
+                }
+
+                .juego4__textoImg img{
+                    width: 80%;
+                    height: 80%;
+                    object-fit: cover;    
+                }
+
                 .juego4__img{
                     filter: blur(7px);
                     -webkit-filter: blur(7px);
@@ -392,295 +322,6 @@
                     object-fit: cover;
                     object-position: 100% 65%;
                 }
-
-
-                /*====JUEGO MOBILE====*/
-                
-                    @media only screen and (max-width:1445px){
-                        .juego{
-                            grid-template-columns: 0.1fr 1fr 0.1fr;
-                        }
-                        .juego1__texto{
-                            width: 40%;
-                            height: 500px;
-                            padding: 3rem 2rem 2rem 2rem;
-                            margin-left: 6%;
-                            height: auto;
-                        }   
-
-                        .juego1__imagen{
-                            width: 620px;
-                            height: 480px;
-                            margin: 0px 3% 0 3%;
-                            overflow: hidden;
-
-                            img{
-                                width: auto;
-                                height: auto;
-                                max-height: 450px;
-                            }
-                        }
-
-                        .juego2__texto{
-                            width: 40%;
-                            height: 500px;
-                            padding: 3rem 2rem 2rem 2rem;
-                            margin-right: 6%;
-                            height: auto;
-                        }   
-
-                        .juego2__imagen{
-                            width: 620px;
-                            height: 480px;
-                            margin: 0px 3% 0 3%;
-                            overflow: hidden;
-
-                            img{
-                                width: auto;
-                                height: auto;
-                                max-height: 450px;
-                            }
-                        }
-
-                        .juego3__texto{
-                            width: 40%;
-                            height: 500px;
-                            padding: 3rem 2rem 2rem 2rem;
-                            margin-left: 6%;
-                            height: auto;
-                        }   
-
-                        .juego3__imagen{
-                            width: 620px;
-                            height: 480px;
-                            margin: 0px 3% 0 3%;
-                            overflow: hidden;
-
-                            img{
-                                width: auto;
-                                height: auto;
-                                max-height: 450px;
-                            }
-                        }
-                    }
-
-                    @media only screen and (max-width:1200px){
-                        
-                        .juego{
-                            grid-area: juego;
-                            width: 100%;
-                            height: auto;
-                            display: grid;
-                            grid-template-rows: repeat(4, auto);
-                            grid-template-columns: 1fr;
-                            grid-row-gap: 1.5rem;
-                            grid-template-areas:
-                            "juego1"
-                            "juego2"
-                            "juego3"
-                            "juego4";
-                        }
-
-                    }
-
-                    @media only screen and (max-width:1023px){
-
-                        .juego{
-                            grid-row-gap: 5.2rem;
-                        }
-                        
-                        .juego1{
-                            justify-content: center;
-                            text-align: center;
-                            flex-wrap: wrap;
-                            @include panelBlueFull;
-                        }
-
-                        .juego1__texto{
-                            height: auto;
-                            width: 80%;
-                            margin-left: 0;
-                        }
-
-                        .juego1__imagen{
-                            width: 620px;
-                            height: 480px;
-                            margin: 0;
-                            overflow: hidden;
-
-                            img{
-                                width: auto;
-                                height: auto;
-                                max-height: 450px;
-                            }
-                        }
-
-                        .juego2{
-                            justify-content: center;
-                            text-align: center;
-                            flex-wrap: wrap-reverse;
-                            @include panelBlueFull;
-                        }
-
-                        .juego2__texto{
-                            height: auto;
-                            width: 80%;
-                            margin-left: 0;
-                        }
-
-                        .juego2__imagen{
-                            width: 620px;
-                            height: 480px;
-                            margin: 0;
-                            overflow: hidden;
-
-                            img{
-                                width: auto;
-                                height: auto;
-                                max-height: 450px;
-                            }
-                        }
-
-                        .juego3{
-                            justify-content: center;
-                            text-align: center;
-                            flex-wrap: wrap;
-                            @include panelBlueFull;
-                        }
-
-                        .juego3__texto{
-                            height: auto;
-                            width: 80%;
-                            margin-left: 0;
-                        }
-
-                        .juego3__imagen{
-                            width: 620px;
-                            height: 480px;
-                            margin: 0;
-                            overflow: hidden;
-
-                            img{
-                                width: auto;
-                                height: auto;
-                                max-height: 450px;
-                            }
-                        }
-
-                    @media only screen and (max-width:600px){
-                        .juego1__imagen{
-                            width: 100%;
-                            height: auto;
-                            margin: 0px;
-
-                            img{
-                                width: auto;
-                                height: 300px;
-                                
-                            }
-                        }
-
-                        .juego2__imagen{
-                            width: 100%;
-                            height: auto;
-                            margin: 0px;
-
-                            img{
-                                width: auto;
-                                height: 300px;
-                                
-                            }
-                        }
-
-                        .juego3__imagen{
-                            width: 100%;
-                            height: auto;
-                            margin: 0px;
-
-                            img{
-                                width: auto;
-                                height: 300px;
-                                
-                            }
-                        }
-                    }
-
-                    @media only screen and (max-width:480px){
-                        
-                        .juego1__texto{
-
-                            h2{
-                                @include textMed($textM,$ColWhite,$shadowBlueTitle);
-                            }
-
-                            p{
-                                margin-top: 1.3rem;
-                                @include textLight($textXS,$ColWhite,$shadowBlueText);
-                            }
-                        }
-                        
-                        .juego1__imagen{
-                            width: 100%;
-                            height: auto;
-                            margin: 0px 0px 1rem 0px;
-
-                            img{
-                                width: auto;
-                                height: 220px;
-                                
-                            }
-                        }
-
-                        .juego2__texto{
-
-                            h2{
-                                @include textMed($textM,$ColWhite,$shadowBlueTitle);
-                            }
-
-                            p{
-                                margin-top: 1.3rem;
-                                @include textLight($textXS,$ColWhite,$shadowBlueText);
-                            }
-                        }
-                        
-                        .juego2__imagen{
-                            width: 100%;
-                            height: auto;
-                            margin: 0px 0px 1rem 0px;
-
-                            img{
-                                width: auto;
-                                height: 220px;
-                                
-                            }
-                        }
-
-                        .juego3__texto{
-
-                            h2{
-                                @include textMed($textM,$ColWhite,$shadowBlueTitle);
-                            }
-
-                            p{
-                                margin-top: 1.3rem;
-                                @include textLight($textXS,$ColWhite,$shadowBlueText);
-                            }
-                        }
-                        
-                        .juego3__imagen{
-                            width: 100%;
-                            height: auto;
-                            margin: 0px 0px 1rem 0px;
-
-                            img{
-                                width: auto;
-                                height: 220px;
-                                
-                            }
-                        }
-                    }
-
-                    }
 
 
     .contacto{

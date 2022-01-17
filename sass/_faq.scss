@@ -83,7 +83,7 @@
         z-index: 1;
 
         p{
-            @include textLight($textS,$ColWhite,0);
+            @include textLight($textXS,$ColWhite,0);
             margin: 1.5rem;
         }
     }

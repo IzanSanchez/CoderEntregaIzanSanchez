@@ -1,3 +1,22 @@
+/*====FONTS====*/
+@font-face {
+  font-family: Apex Med;
+  src: url(assets/fonts/Apex\ Mk3-Medium.otf);
+}
+@font-face {
+  font-family: Apex Light;
+  src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
+} 
+
+@font-face {
+  font-family: Azurite;
+  src: url(assets/fonts/Azurite_Regular.otf);
+} 
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda&display=swap');
+
+
 //===VARIABLES Y MIXINS===
 
 //color texto
@@ -15,6 +34,8 @@ $textXS: 16px;
 //Shadow textos
 $shadowBlueTitle: 3px 3px 3px rgba(26, 104, 100, 1);
 $shadowBlueText: 2px 2px 3px rgba(26, 104, 100, 1);
+$shadowBrownTitle: 3px 3px 3px rgba(63, 35, 21, 1);
+$shadowBrownText: 2px 2px 3px rgba(63, 35, 21, 1);
 
 //Animaciones
 //filtro blanco y negro con grow, se aplica en la imagen
@@ -65,17 +86,19 @@ $shadowBlueText: 2px 2px 3px rgba(26, 104, 100, 1);
 
 //tipos de texto
 @mixin textMed($textSize,$textColor,$textShadow) {
-  font-family: "Apex Med";
+  font-family: "Azurite";
   font-size: $textSize;
   color: $textColor;
   text-shadow: $textShadow;
+  letter-spacing: 2px;
 }
 
 @mixin textLight($textSize,$textColor,$textShadow) {
-  font-family: "Apex Light";
+  font-family: 'Apex Med';
   font-size: $textSize;
   color: $textColor;
   text-shadow: $textShadow;
+  letter-spacing: 2.5px;
 }
 
 /*=======================*/
@@ -95,13 +118,3 @@ $shadowBlueText: 2px 2px 3px rgba(26, 104, 100, 1);
     list-style-type: none;
   }
 
-
-/*====FONTS====*/
-  @font-face {
-    font-family: Apex Med;
-    src: url(assets/fonts/Apex\ Mk3-Medium.otf);
-  }
-  @font-face {
-    font-family: Apex Light;
-    src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
-  } 

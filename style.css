@@ -1,4 +1,19 @@
 @charset "UTF-8";
+/*====FONTS====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coda&display=swap");
+@font-face {
+  font-family: Apex Med;
+  src: url(assets/fonts/Apex\ Mk3-Medium.otf);
+}
+@font-face {
+  font-family: Apex Light;
+  src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
+}
+@font-face {
+  font-family: Azurite;
+  src: url(assets/fonts/Azurite_Regular.otf);
+}
 /*=======================*/
 /*====GENERAL SETTINGS===*/
 /*=======================*/
@@ -15,15 +30,6 @@
   list-style-type: none;
 }
 
-/*====FONTS====*/
-@font-face {
-  font-family: Apex Med;
-  src: url(assets/fonts/Apex\ Mk3-Medium.otf);
-}
-@font-face {
-  font-family: Apex Light;
-  src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
-}
 header {
   /*grid-area: header;*/
   width: 100%;
@@ -78,6 +84,7 @@ footer {
 
 .gridFooter a:hover {
   color: #4e5858;
+  text-decoration: none;
 }
 
 /*==logo==*/
@@ -247,37 +254,6 @@ footer {
   height: 600px;
 }
 
-/*====CABECERA MOBILE====*/
-@media only screen and (max-width: 1815px) {
-  .jumbotron {
-    height: 740px;
-  }
-
-  .container__img {
-    width: 800px;
-    height: 600px;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .jumbotron {
-    height: 530px;
-  }
-
-  .container__img {
-    width: 500px;
-    height: 400px;
-  }
-}
-@media only screen and (max-width: 420px) {
-  .jumbotron {
-    height: 350px;
-  }
-
-  .container__img {
-    width: 350px;
-    height: 250px;
-  }
-}
 /*====SECCION HISTORIA====*/
 .historia {
   grid-area: historia;
@@ -298,20 +274,22 @@ footer {
 }
 
 .historia__titulo {
-  font-family: "Apex Med";
+  font-family: "Azurite";
   font-size: 4rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
   text-align: center;
   width: 100%;
   height: auto;
 }
 
 .historia__texto {
-  font-family: "Apex Light";
+  font-family: "Apex Med";
   font-size: 1.5rem;
   color: #c7e2df;
   text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2.5px;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -332,58 +310,6 @@ footer {
   max-height: 700px;
 }
 
-/*====CABECERA MOBILE====*/
-@media only screen and (max-width: 1200px) {
-  .historia {
-    margin-bottom: 6rem;
-  }
-
-  .historia div {
-    margin: 5rem 10% 0rem 10%;
-  }
-
-  .historia__imagen {
-    width: 100%;
-    height: 700px;
-  }
-  .historia__imagen img {
-    width: auto;
-    height: auto;
-    max-height: 520px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .historia {
-    margin-bottom: 8rem;
-  }
-  .historia div {
-    margin: 1.5rem 10% 0rem 10%;
-  }
-
-  .historia__titulo {
-    font-family: "Apex Med";
-    font-size: 2.3rem;
-    color: #c7e2df;
-    text-shadow: 3px 3px 3px #1a6864;
-  }
-
-  .historia__texto {
-    font-family: "Apex Light";
-    font-size: 16px;
-    color: #c7e2df;
-    text-shadow: 3px 3px 3px #1a6864;
-  }
-
-  .historia__imagen {
-    width: 100%;
-    height: 700px;
-  }
-  .historia__imagen img {
-    width: auto;
-    height: auto;
-    max-height: 620px;
-  }
-}
 /*====SECCION JUEGO====*/
 .juego {
   grid-area: juego;
@@ -420,17 +346,19 @@ footer {
   height: auto;
 }
 .juego1__texto h2 {
-  font-family: "Apex Med";
+  font-family: "Azurite";
   font-size: 2.3rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
 }
 .juego1__texto p {
   margin-top: 1.3rem;
-  font-family: "Apex Light";
+  font-family: "Apex Med";
   font-size: 1.2rem;
   color: #c7e2df;
   text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2.5px;
 }
 
 .juego1__imagen {
@@ -469,17 +397,19 @@ footer {
   height: auto;
 }
 .juego2__texto h2 {
-  font-family: "Apex Med";
+  font-family: "Azurite";
   font-size: 2.3rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
 }
 .juego2__texto p {
   margin-top: 1.3rem;
-  font-family: "Apex Light";
+  font-family: "Apex Med";
   font-size: 1.2rem;
   color: #c7e2df;
   text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2.5px;
 }
 
 .juego2__imagen {
@@ -527,17 +457,19 @@ footer {
   height: auto;
 }
 .juego3__texto h2 {
-  font-family: "Apex Med";
+  font-family: "Azurite";
   font-size: 2.3rem;
   color: #c7e2df;
   text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
 }
 .juego3__texto p {
   margin-top: 1.3rem;
-  font-family: "Apex Light";
+  font-family: "Apex Med";
   font-size: 1.2rem;
   color: #c7e2df;
   text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2.5px;
 }
 
 .juego3__imagen {
@@ -555,7 +487,7 @@ footer {
 
 .juego4 {
   grid-area: juego4;
-  height: 780px;
+  height: 1016px;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -564,14 +496,42 @@ footer {
 }
 
 .juego4__texto {
-  margin: 250px 10% 0 10%;
+  margin: 0px 3% 0px 3%;
   padding: 3%;
   position: absolute;
   width: auto;
-  max-width: 600px;
-  text-align: center;
+  height: auto;
+  max-width: 1000px;
   z-index: 1;
-  background-color: rgba(37, 47, 54, 0.26);
+}
+.juego4__texto h2 {
+  margin-bottom: 35px;
+  font-family: "Azurite";
+  font-size: 2.3rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #3f2315;
+  letter-spacing: 2px;
+}
+.juego4__texto p {
+  margin-top: 35px;
+  font-family: "Apex Med";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #3f2315;
+  letter-spacing: 2.5px;
+}
+
+.juego4__textoImg {
+  max-width: 880px;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.juego4__textoImg img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
 }
 
 .juego4__img {
@@ -583,7 +543,373 @@ footer {
   object-position: 100% 65%;
 }
 
-/*====JUEGO MOBILE====*/
+.contacto {
+  grid-area: contacto;
+  width: auto;
+  height: auto;
+  margin: 4rem;
+  padding: 5rem 10% 5rem 10%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contacto h2 {
+  font-family: "Azurite";
+  font-size: 3rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
+}
+.contacto p {
+  margin-top: 1.3rem;
+  font-family: "Apex Med";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2.5px;
+}
+
+/*======================*/
+/*=========FAQ=========*/
+/*======================*/
+.bodyFaq {
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "faqMain" "footer";
+}
+
+.faq {
+  grid-area: faqMain;
+  margin: 6rem 10% 8rem 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+.faq h1 {
+  font-family: "Azurite";
+  font-size: 4rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+}
+
+.accordion {
+  display: flex;
+  align-items: center;
+  background-color: #313436;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-family: "Apex Med";
+  font-size: 1.5rem;
+  color: #c7e2df;
+  text-shadow: 0;
+  letter-spacing: 2.5px;
+  margin: 1.5rem 0px 0px 0px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  z-index: 2;
+}
+
+.active, .accordion:hover {
+  background-color: #1b1d1f;
+  border: 2px solid #196966;
+  border-radius: 8px;
+}
+
+.accordion:after {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 1.2rem;
+  color: #c7e2df;
+  margin-left: auto;
+}
+
+.active:after {
+  content: "➖";
+  /* Unicode character for "minus" sign (-) */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  width: 100%;
+  margin: -10px;
+  background-color: #1b1d1f;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-bottom: 2px solid #196966;
+  border-left: 2px solid #196966;
+  border-right: 2px solid #196966;
+  border-radius: 0px 0px 8px 8px;
+  z-index: 1;
+}
+.panel p {
+  font-family: "Apex Med";
+  font-size: 16px;
+  color: #c7e2df;
+  text-shadow: 0;
+  letter-spacing: 2.5px;
+  margin: 1.5rem;
+}
+
+/*====CABECERA MOBILE====*/
+@media only screen and (max-width: 850px) {
+  .faq {
+    margin: 2rem 10% 8rem 10%;
+  }
+}
+/*======================*/
+/*=========BLOG=========*/
+/*======================*/
+.bodyBlog {
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "bodyBlog" "footer";
+}
+.bodyBlog main {
+  grid-area: bodyBlog;
+  margin: 6rem 10% 8rem 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.blogH2 {
+  font-family: "Azurite";
+  font-size: 4rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+}
+
+.container-xl {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  padding: 2rem 4rem 4rem 4rem;
+}
+
+.card-title {
+  font-family: "Azurite";
+  font-size: 1.5rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2px;
+}
+
+.card-text {
+  font-family: "Apex Med";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 0;
+  letter-spacing: 2.5px;
+}
+
+.btn-secondary {
+  font-family: "Apex Med";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 0;
+  letter-spacing: 2.5px;
+}
+
+/*==============================*/
+/*=========ENTRADA BLOG=========*/
+/*==============================*/
+.bodyBlogEntry main {
+  background-image: url(assets/img/BG.png);
+  background-size: cover;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "bodyBlogEntry" "footer";
+}
+
+.entrada {
+  grid-area: bodyBlogEntry;
+  margin: 3rem 10% 8rem 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.entradaTitulo {
+  font-family: "Azurite";
+  font-size: 1.5rem;
+  color: #c7e2df;
+  text-shadow: 3px 3px 3px #1a6864;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 100px;
+  padding: 80px 0 130px 0;
+}
+
+.entradaCuerpo {
+  width: 80%;
+  min-height: 690px;
+  height: auto;
+  padding: 50px;
+  margin-top: 10px;
+  background-color: #232527;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.entradaCuerpo__img {
+  width: auto;
+  height: auto;
+  max-width: 750px;
+  max-height: 400px;
+  margin: 30px 10% 0 10%;
+}
+
+.entradaCuerpo__img img {
+  width: 100%;
+  height: 100%;
+}
+
+.entradaCuerpo__vid {
+  width: auto;
+  height: auto;
+  max-width: 750px;
+  max-height: 400px;
+  margin: 30px 10% 0 10%;
+}
+
+.entradaCuerpo p {
+  height: auto;
+  font-family: "Apex Med";
+  font-size: 1.2rem;
+  color: #c7e2df;
+  text-shadow: 2px 2px 3px #1a6864;
+  letter-spacing: 2.5px;
+  margin-top: 30px;
+}
+
+.entradaCuerpo__hora {
+  font-family: "Apex Light";
+  font-size: 17px;
+  color: #8b9e9c;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+/*======================*/
+/*======media query=====*/
+/*======================*/
+/*=============*/
+/*=====Home====*/
+/*=============*/
+/*====Jumbotron====*/
+@media only screen and (max-width: 1815px) {
+  .jumbotron {
+    height: 740px;
+  }
+
+  .container__img {
+    width: 800px;
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .jumbotron {
+    height: 530px;
+  }
+
+  .container__img {
+    width: 500px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .jumbotron {
+    height: 350px;
+  }
+
+  .container__img {
+    width: 350px;
+    height: 250px;
+  }
+}
+/*====Historia====*/
+@media only screen and (max-width: 1200px) {
+  .historia {
+    margin-bottom: 6rem;
+  }
+
+  .historia div {
+    margin: 5rem 10% 0rem 10%;
+  }
+
+  .historia__imagen {
+    width: 100%;
+    height: 700px;
+  }
+  .historia__imagen img {
+    width: auto;
+    height: auto;
+    max-height: 520px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .historia {
+    margin-bottom: 8rem;
+  }
+  .historia div {
+    margin: 1.5rem 10% 0rem 10%;
+  }
+
+  .historia__titulo {
+    font-family: "Azurite";
+    font-size: 2.3rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2px;
+  }
+
+  .historia__texto {
+    font-family: "Apex Med";
+    font-size: 16px;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2.5px;
+  }
+
+  .historia__imagen img {
+    max-height: 620px;
+  }
+}
+/*====juego====*/
 @media only screen and (max-width: 1445px) {
   .juego {
     grid-template-columns: 0.1fr 1fr 0.1fr;
@@ -648,6 +974,10 @@ footer {
     height: auto;
     max-height: 450px;
   }
+
+  .juego4 {
+    height: 990px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .juego {
@@ -681,7 +1011,6 @@ footer {
   }
 
   .juego1__texto {
-    height: auto;
     width: 80%;
     margin-left: 0;
   }
@@ -691,11 +1020,6 @@ footer {
     height: 480px;
     margin: 0;
     overflow: hidden;
-  }
-  .juego1__imagen img {
-    width: auto;
-    height: auto;
-    max-height: 450px;
   }
 
   .juego2 {
@@ -713,9 +1037,8 @@ footer {
   }
 
   .juego2__texto {
-    height: auto;
     width: 80%;
-    margin-left: 0;
+    margin-right: 0;
   }
 
   .juego2__imagen {
@@ -723,11 +1046,6 @@ footer {
     height: 480px;
     margin: 0;
     overflow: hidden;
-  }
-  .juego2__imagen img {
-    width: auto;
-    height: auto;
-    max-height: 450px;
   }
 
   .juego3 {
@@ -745,7 +1063,6 @@ footer {
   }
 
   .juego3__texto {
-    height: auto;
     width: 80%;
     margin-left: 0;
   }
@@ -756,10 +1073,9 @@ footer {
     margin: 0;
     overflow: hidden;
   }
-  .juego3__imagen img {
-    width: auto;
-    height: auto;
-    max-height: 450px;
+
+  .juego4 {
+    height: 965px;
   }
 }
 @media only screen and (max-width: 1023px) and (max-width: 600px) {
@@ -769,7 +1085,6 @@ footer {
     margin: 0px;
   }
   .juego1__imagen img {
-    width: auto;
     height: 300px;
   }
 
@@ -779,7 +1094,6 @@ footer {
     margin: 0px;
   }
   .juego2__imagen img {
-    width: auto;
     height: 300px;
   }
 
@@ -789,365 +1103,134 @@ footer {
     margin: 0px;
   }
   .juego3__imagen img {
-    width: auto;
     height: 300px;
+  }
+
+  .juego4 {
+    height: 842px;
   }
 }
 @media only screen and (max-width: 1023px) and (max-width: 480px) {
   .juego1__texto h2 {
-    font-family: "Apex Med";
+    font-family: "Azurite";
     font-size: 1.5rem;
     color: #c7e2df;
     text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2px;
   }
   .juego1__texto p {
     margin-top: 1.3rem;
-    font-family: "Apex Light";
+    font-family: "Apex Med";
     font-size: 16px;
     color: #c7e2df;
     text-shadow: 2px 2px 3px #1a6864;
+    letter-spacing: 2.5px;
   }
 
   .juego1__imagen {
-    width: 100%;
     height: auto;
     margin: 0px 0px 1rem 0px;
   }
   .juego1__imagen img {
-    width: auto;
     height: 220px;
   }
 
   .juego2__texto h2 {
-    font-family: "Apex Med";
+    font-family: "Azurite";
     font-size: 1.5rem;
     color: #c7e2df;
     text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2px;
   }
   .juego2__texto p {
     margin-top: 1.3rem;
-    font-family: "Apex Light";
+    font-family: "Apex Med";
     font-size: 16px;
     color: #c7e2df;
     text-shadow: 2px 2px 3px #1a6864;
+    letter-spacing: 2.5px;
   }
 
   .juego2__imagen {
-    width: 100%;
     height: auto;
     margin: 0px 0px 1rem 0px;
   }
   .juego2__imagen img {
-    width: auto;
     height: 220px;
   }
 
   .juego3__texto h2 {
-    font-family: "Apex Med";
+    font-family: "Azurite";
     font-size: 1.5rem;
     color: #c7e2df;
     text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2px;
   }
   .juego3__texto p {
     margin-top: 1.3rem;
-    font-family: "Apex Light";
+    font-family: "Apex Med";
     font-size: 16px;
     color: #c7e2df;
     text-shadow: 2px 2px 3px #1a6864;
+    letter-spacing: 2.5px;
   }
 
   .juego3__imagen {
-    width: 100%;
     height: auto;
     margin: 0px 0px 1rem 0px;
   }
   .juego3__imagen img {
-    width: auto;
     height: 220px;
   }
-}
-.contacto {
-  grid-area: contacto;
-  width: auto;
-  height: auto;
-  margin: 4rem;
-  padding: 5rem 10% 5rem 10%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-.contacto h2 {
-  font-family: "Apex Med";
-  font-size: 3rem;
-  color: #c7e2df;
-  text-shadow: 3px 3px 3px #1a6864;
-}
-.contacto p {
-  margin-top: 1.3rem;
-  font-family: "Apex Light";
-  font-size: 1.2rem;
-  color: #c7e2df;
-  text-shadow: 2px 2px 3px #1a6864;
-}
 
-/*======================*/
-/*=========FAQ=========*/
-/*======================*/
-.bodyFaq {
-  background-image: url(assets/img/BG.png);
-  background-size: cover;
-  overflow-x: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "header" "faqMain" "footer";
-}
+  .juego4 {
+    height: 730px;
+  }
 
-.faq {
-  grid-area: faqMain;
-  margin: 6rem 10% 8rem 10%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
-}
-.faq h1 {
-  font-family: "Apex Med";
-  font-size: 4rem;
-  color: #c7e2df;
-  text-shadow: 3px 3px 3px #1a6864;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 120px;
-}
-
-.accordion {
-  display: flex;
-  align-items: center;
-  background-color: #313436;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  font-family: "Apex Light";
-  font-size: 1.5rem;
-  color: #c7e2df;
-  text-shadow: 0;
-  margin: 1.5rem 0px 0px 0px;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.2s;
-  z-index: 2;
-}
-
-.active, .accordion:hover {
-  background-color: #1b1d1f;
-  border: 2px solid #196966;
-  border-radius: 8px;
-}
-
-.accordion:after {
-  content: "➕";
-  /* Unicode character for "plus" sign (+) */
-  font-size: 1.2rem;
-  color: #c7e2df;
-  margin-left: auto;
-}
-
-.active:after {
-  content: "➖";
-  /* Unicode character for "minus" sign (-) */
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  width: 100%;
-  margin: -10px;
-  background-color: #1b1d1f;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  border-bottom: 2px solid #196966;
-  border-left: 2px solid #196966;
-  border-right: 2px solid #196966;
-  border-radius: 0px 0px 8px 8px;
-  z-index: 1;
-}
-.panel p {
-  font-family: "Apex Light";
-  font-size: 1.2rem;
-  color: #c7e2df;
-  text-shadow: 0;
-  margin: 1.5rem;
-}
-
-/*====CABECERA MOBILE====*/
-@media only screen and (max-width: 850px) {
-  .faq {
-    margin: 2rem 10% 8rem 10%;
+  .juego4__texto h2 {
+    margin-top: 1.3rem;
+    font-family: "Azurite";
+    font-size: 1.5rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #3f2315;
+    letter-spacing: 2px;
+  }
+  .juego4__texto p {
+    font-family: "Apex Med";
+    font-size: 16px;
+    color: #c7e2df;
+    text-shadow: 2px 2px 3px #3f2315;
+    letter-spacing: 2.5px;
   }
 }
-/*======================*/
-/*=========BLOG=========*/
-/*======================*/
-.bodyBlog {
-  background-image: url(assets/img/BG.png);
-  background-size: cover;
-  overflow-x: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "header" "bodyBlog" "footer";
+@media only screen and (max-width: 1023px) and (max-width: 290px) {
+  .juego4 {
+    height: 800px;
+  }
 }
-.bodyBlog main {
-  grid-area: bodyBlog;
-  margin: 6rem 10% 8rem 10%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
+/*====subscripción====*/
+@media only screen and (max-width: 480px) {
+  .contacto h2 {
+    font-family: "Azurite";
+    font-size: 1.5rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2px;
+  }
 }
+/*====Blog Entradas====*/
+@media only screen and (max-width: 600px) {
+  .entrada {
+    margin: 0rem 10% 8rem 10%;
+  }
 
-.blogH2 {
-  font-family: "Apex Med";
-  font-size: 4rem;
-  color: #c7e2df;
-  text-shadow: 2px 2px 3px #1a6864;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 120px;
-}
+  .entradaTitulo {
+    padding: 80px 0 120px 0;
+  }
 
-.container-xl {
-  display: flex;
-  justify-content: center;
-  width: auto;
-  padding: 2rem 4rem 4rem 4rem;
-}
-
-.card-title {
-  font-family: "Apex Med";
-  font-size: 1.5rem;
-  color: #c7e2df;
-  text-shadow: 2px 2px 3px #1a6864;
-}
-
-.card-text {
-  font-family: "Apex Light";
-  font-size: 1.2rem;
-  color: #c7e2df;
-  text-shadow: 0;
-}
-
-.btn-secondary {
-  font-family: "Apex Light";
-  font-size: 1.2rem;
-  color: #c7e2df;
-  text-shadow: 0;
-}
-
-/*==============================*/
-/*=========ENTRADA BLOG=========*/
-/*==============================*/
-.bodyBlogEntry main {
-  background-image: url(assets/img/BG.png);
-  background-size: cover;
-  overflow-x: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas: "header" "bodyBlogEntry" "footer";
-}
-
-.entrada {
-  grid-area: bodyBlogEntry;
-  margin: 6rem 10% 8rem 10%;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.entradaTitulo {
-  font-family: "Apex Light";
-  font-size: 30px;
-  color: #c7e2df;
-  text-align: center;
-  width: 100%;
-  height: 100px;
-  padding: 80px 0 80px 0;
-}
-
-.entradaCuerpo {
-  width: 60%;
-  min-height: 690px;
-  height: auto;
-  padding: 50px;
-  margin-top: 10px;
-  background-color: #232527;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.entradaCuerpo__img {
-  width: auto;
-  height: auto;
-  max-width: 750px;
-  max-height: 400px;
-  margin: 30px 10% 0 10%;
-}
-
-.entradaCuerpo__img img {
-  width: 100%;
-  height: 100%;
-}
-
-.entradaCuerpo__vid {
-  width: auto;
-  height: auto;
-  max-width: 750px;
-  max-height: 400px;
-  margin: 30px 10% 0 10%;
-}
-
-#entradaCuerpo__video {
-  margin-left: 120px;
-}
-
-.entradaCuerpo p {
-  height: auto;
-  font-size: 22px;
-  margin-top: 30px;
-}
-
-.entradaCuerpo__link {
-  font-family: "Apex Light";
-  font-size: 22px;
-  margin-top: 20px;
-}
-
-.entradaCuerpo__link a {
-  color: #c7e2df;
-}
-
-.entradaCuerpo__link a:hover {
-  color: #196966;
-}
-
-.entradaCuerpo__hora {
-  font-family: "Apex Light";
-  font-size: 17px;
-  color: #8b9e9c;
-  font-style: italic;
-  margin-top: 15px;
+  .entradaCuerpo {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
