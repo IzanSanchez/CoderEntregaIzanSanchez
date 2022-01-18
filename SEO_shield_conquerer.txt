@@ -1,0 +1,30 @@
+Los añadidos a nivel de seo a la web de shield conquerer son los siguientes:
+
+
+INDEX
+    <title>Shield conquerer</title>
+    <meta name="shield conquerer" content="Shield conquerer es un juego de mesa ambientado en el espacio donde 4 facciones se deberán de enfrentar entre si para destruir el escudo del oponente">
+    <meta name="keywords" content="shield conquerer, board game, juego de mesa, espacio, futurismo, undir la flota, eurogame, juego divertido">
+
+BLOG
+    <title>Blog</title>
+    <meta name="description" content="Blog dedicado a todas las noticias pertenecientes al proyecto shield conquerer">
+    <meta name="keywords" content="shield conquerer, board game, juego de mesa, blog, noticias, desarrollo">
+
+FAQ
+    <title>faq</title>
+    <meta name="description" content="Seccion de preguntas y respuestas mas frequentes relacionadas con el desarrollo del juego de mesa shield conquerer">
+    <meta name="keywords" content="shield conquerer, board game, juego de mesa, faq, preguntas frequentes">
+
+BLOGENTRY1
+    <title>blogEntry1</title>
+    <meta name="description" content="¡Nos vemos en kickstarter! Hoy lanzamos la campaña de shield conquerer en kickstarter">
+    <meta name="keywords" content="shield conquerer, board game, juego de mesa, kickstarter, financiación, proyecto">
+
+BLOGENTRY2
+    <title>blogEntry2</title>
+    <meta name="Renders finales" content="Después de mucho trabajo aquí tenemos el render final de la que será la caja (con todos sus componentes) del juego shield conquerer">
+    <meta name="keywords" content="shield conquerer, board game, juego de mesa, render, contenido, caja juego">
+
+
+todos los títulos de las secciones ya estaban puestos con anterioridad, ahora unicamente se le ha añadido la etiqueta de la descripción y de los keywords.

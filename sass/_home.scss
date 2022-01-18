@@ -40,6 +40,16 @@
     ;
 }
 
+.confFlex{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}    
+
+#titleShield{
+        display: none;
+    }
+
     /*====CABECERA DESKTOP====*/
     .jumbotron{
         grid-area: cabecera;
@@ -48,15 +58,11 @@
         background-size: cover;
         background-position: center;
         overflow: hidden;
-        display: flex;
-        text-align: center;
-        justify-content: center;
+        @extend .confFlex;
     }
 
     .container{
-        display: flex;
-        text-align: center;
-        justify-content: center;
+        @extend .confFlex;
         height: auto;
     } 
 
@@ -74,10 +80,8 @@
 
     .historia{
         grid-area: historia;
-        display: flex;
+        @extend .confFlex;
         flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
         width: 100%;
         height: auto;
         overflow: hidden;
@@ -108,9 +112,7 @@
         .historia__imagen{
             width: 100%;
             height: 800px;
-            display: flex;
-            justify-content: center;
-            text-align: center;
+            @extend .confFlex;
             overflow: hidden;
 
             img{
@@ -140,9 +142,9 @@
 
         .juego1{
             grid-area: juego1;
-            display: flex;
+            @extend .confFlex;
+            justify-content: unset;
             flex-wrap: nowrap;
-            align-items: center;
             overflow: hidden;
             height: auto;
             @include panelBlueLeft;
@@ -184,9 +186,9 @@
 
         .juego2{
             grid-area: juego2;
-            display: flex;
+            @extend .confFlex;
+            justify-content: unset;
             flex-wrap: nowrap;
-            align-items: center;
             overflow: hidden;
             height: auto;
             @include panelBlueRight;
@@ -230,8 +232,8 @@
 
         .juego3{
             grid-area: juego3;
-            display: flex;
-            align-items: center;
+            @extend .confFlex;
+            justify-content: unset;
             flex-wrap: nowrap;
             overflow:hidden;
             height: auto;
@@ -276,9 +278,7 @@
             height: 1016px;
             width: 100%; 
             overflow: hidden;
-            display: flex;
-            justify-content: center;
-            text-align: center;
+            @extend .confFlex;
         }
 
                 .juego4__texto{
@@ -292,12 +292,12 @@
 
                     h2{
                         margin-bottom: 35px;
-                        @include textMed($textXM,$ColWhite,$shadowBrownTitle); 
+                        @include textMedBrown($textXM,$ColWhite); 
                     }
 
                     p{
                         margin-top: 35px;
-                        @include textLight($textS,$ColWhite,$shadowBrownText);
+                        @include textLightBrown($textS,$ColWhite);
                     }
                 }
 
@@ -330,9 +330,7 @@
         height: auto;
         margin: 4rem;
         padding: 5rem 10% 5rem 10%;
-        display: flex;
-        justify-content: center;
-        text-align: center;
+        @extend .confFlex;
 
         h2{
             @include textMed($textL,$ColWhite,$shadowBlueTitle);

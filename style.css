@@ -225,6 +225,16 @@ footer {
   grid-template-areas: "cabecera" "historia" "juego" "contacto";
 }
 
+.confFlex, .contacto, .juego4, .juego3, .juego2, .juego1, .historia__imagen, .historia, .container, .jumbotron {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#titleShield {
+  display: none;
+}
+
 /*====CABECERA DESKTOP====*/
 .jumbotron {
   grid-area: cabecera;
@@ -233,15 +243,9 @@ footer {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  display: flex;
-  text-align: center;
-  justify-content: center;
 }
 
 .container {
-  display: flex;
-  text-align: center;
-  justify-content: center;
   height: auto;
 }
 
@@ -257,10 +261,7 @@ footer {
 /*====SECCION HISTORIA====*/
 .historia {
   grid-area: historia;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -299,9 +300,6 @@ footer {
 .historia__imagen {
   width: 100%;
   height: 800px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   overflow: hidden;
 }
 .historia__imagen img {
@@ -324,9 +322,8 @@ footer {
 
 .juego1 {
   grid-area: juego1;
-  display: flex;
+  justify-content: unset;
   flex-wrap: nowrap;
-  align-items: center;
   overflow: hidden;
   height: auto;
   background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
@@ -375,9 +372,8 @@ footer {
 
 .juego2 {
   grid-area: juego2;
-  display: flex;
+  justify-content: unset;
   flex-wrap: nowrap;
-  align-items: center;
   overflow: hidden;
   height: auto;
   background: -moz-linear-gradient(top, #00292880 0%, #22626181 50%, #00292881 100%);
@@ -435,8 +431,7 @@ footer {
 
 .juego3 {
   grid-area: juego3;
-  display: flex;
-  align-items: center;
+  justify-content: unset;
   flex-wrap: nowrap;
   overflow: hidden;
   height: auto;
@@ -490,9 +485,6 @@ footer {
   height: 1016px;
   width: 100%;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 .juego4__texto {
@@ -549,9 +541,6 @@ footer {
   height: auto;
   margin: 4rem;
   padding: 5rem 10% 5rem 10%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 .contacto h2 {
   font-family: "Azurite";

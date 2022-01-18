@@ -385,11 +385,11 @@
 
             h2{
                 margin-top: 1.3rem;
-                @include textMed($textM,$ColWhite,$shadowBrownTitle); 
+                @include textMedBrown($textM,$ColWhite); 
             }
 
             p{
-                @include textLight($textXS,$ColWhite,$shadowBrownText);
+                @include textLightBrown($textXS,$ColWhite);
             }
         }
     }

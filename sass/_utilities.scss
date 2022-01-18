@@ -34,8 +34,8 @@ $textXS: 16px;
 //Shadow textos
 $shadowBlueTitle: 3px 3px 3px rgba(26, 104, 100, 1);
 $shadowBlueText: 2px 2px 3px rgba(26, 104, 100, 1);
-$shadowBrownTitle: 3px 3px 3px rgba(63, 35, 21, 1);
-$shadowBrownText: 2px 2px 3px rgba(63, 35, 21, 1);
+
+$shadowText: ("shadowBrownTitle": 3px 3px 3px rgba(63, 35, 21, 1), "shadowBrownText": 2px 2px 3px rgba(63, 35, 21, 1));
 
 //Animaciones
 //filtro blanco y negro con grow, se aplica en la imagen
@@ -100,6 +100,23 @@ $shadowBrownText: 2px 2px 3px rgba(63, 35, 21, 1);
   text-shadow: $textShadow;
   letter-spacing: 2.5px;
 }
+
+@mixin textLightBrown($textSize,$textColor) {
+  font-family: 'Apex Med';
+  font-size: $textSize;
+  color: $textColor;
+  text-shadow: map-get($shadowText, "shadowBrownText");
+  letter-spacing: 2.5px;
+}
+
+@mixin textMedBrown($textSize,$textColor) {
+  font-family: "Azurite";
+  font-size: $textSize;
+  color: $textColor;
+  text-shadow: map-get($shadowText, "shadowBrownTitle");
+  letter-spacing: 2px;
+}
+
 
 /*=======================*/
 /*====GENERAL SETTINGS===*/
