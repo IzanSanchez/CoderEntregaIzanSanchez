@@ -43,14 +43,14 @@ footer{
         height: 160px;
         display: flex;
         justify-content: center;
-    }
 
-            .gridFooter__logo img{
+        img{
             margin: 10px 0px 0px 0px;
             padding: 1rem;
             width: 300px;
             height: auto;
             }
+    }
     
     /*==legal==*/
         
@@ -60,14 +60,14 @@ footer{
         height: 160px;
         display: flex;
         justify-content: center;
-        }
 
-            .gridFooter__legal ul{
+        ul{
             margin: 30px 0px 0px 0px;
             padding: 1rem;
             width: 150px;
             height: fit-content;
             }
+        }
     
     /*==rrss==*/
 
@@ -77,15 +77,14 @@ footer{
         height: 160px;
         display: flex;
         justify-content: center;
-        }
-
-            .gridFooter__rrss ul{
+        ul{
             margin: 30px 0px 0px 0px;
             padding: 1rem;
             width: 150px;
             height: fit-content;
             text-align: end;
             }
+        }
 
         /*====FOOTER MOBILE====*/
 
@@ -110,14 +109,14 @@ footer{
                 grid-area: logo; 
                 display: flex;
                 justify-content: center;
-            }
 
-                    .gridFooter__logo img{
+                img{
                     margin: 10px 0px 0px 0px;
                     padding: 1rem;
                     width: 300px;
                     height: auto;
                     }
+            }
 
             /*==legal==*/
 
@@ -125,14 +124,14 @@ footer{
                 grid-area: legal;
                 display: flex;
                 justify-content: center;
-            }
 
-                    .gridFooter__legal ul{
+                ul{
                     margin: 30px 0px 0px 0px;
                     height: 150px;
                     width: fit-content;
                     padding: 1rem;
                     }
+            }
 
             /*==rrss==*/
             
@@ -140,13 +139,13 @@ footer{
                 grid-area: rrss; 
                 display: flex;
                 justify-content: center;
-            }
 
-                    .gridFooter__rrss ul{
+                ul{
                     margin: 30px 0px 0px 0px;
                     height: 150px;
                     width: fit-content;
                     padding: 1rem;
                     text-align: end;
                     }   
+            }
         }
