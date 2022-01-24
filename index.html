@@ -9,6 +9,7 @@
     <!--ANIM LINK-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     <title>Shield conquerer</title>
     <meta name="shield conquerer" content="Shield conquerer es un juego de mesa ambientado en el espacio donde 4 facciones se deberán de enfrentar entre si para destruir el escudo del oponente">
     <meta name="keywords" content="shield conquerer, board game, juego de mesa, espacio, futurismo, undir la flota, eurogame, juego divertido">
@@ -227,25 +228,30 @@
         }
     </style>
 
-    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+    <!--BOTÓN DE AUTO SCROLL TOP-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAU5JREFUSEvtlEFegkAUh/8PFrX0AIm+EyS7oEVxgvIk2QmyE2QniRvoJlhqJ3iKHcBlLnT6QYkJjWOhq5od8Ob/zftmGMKBBx04H38I0BepHVnop0rnSwQB82wXvTsriqbSI4WbNFQRHv06d/YGiKdyCfWx+nwQAq/OAxPE2EGq5tjGEECzEDZ+W8A1qTICokRCAq6+WykB4ZnD7W1dbAVEiVwT8LQtQAFt3+FQV6MFZKfGhhBQMwBm8wVYp0oLiBNJN/DCtImf3weew4FGY/l1NJEOER52DM/KlMKt3+BecU6pg1ikqWwMTWqKQQqY0QKuxzzePM2FyjiREYDTn6x+VasURn6DXS0gnkgXhLvfhOdzFO69BndXz7mi51dpWcvsh6o8lhbc8xNOTayv6ypqSvvxRVXewT4BAF48h1sbHVT2ogkw3kVVwf8Ao8F3TpJlGVpFuKUAAAAASUVORK5CYII="/></button>
     <script>
-    $(document).ready(function(){
-        $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('#back-to-top').fadeIn();
-                } else {
-                    $('#back-to-top').fadeOut();
-                }
-            });
-            // scroll body to 0px on click
-            $('#back-to-top').click(function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 400);
-                return false;
-            });
-    });
+    //Get the button:
+        mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
+
 
 </body>
 </html>

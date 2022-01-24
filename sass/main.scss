@@ -272,8 +272,9 @@
     .juego4{
         height: 965px;
     }
+}
 
-    @media only screen and (max-width:600px) {
+@media only screen and (max-width:600px) {
         .juego1__imagen {
             width: 100%;
             height: auto;
@@ -307,97 +308,97 @@
         .juego4{
             height: 842px;
         }
-    }
+}
 
-    @media only screen and (max-width:480px) {
 
-        .juego1__texto {
+@media only screen and (max-width:480px) {
 
-            h2 {
-                @include textMed($textM, $ColWhite, $shadowBlueTitle);
-            }
+    .juego1__texto {
 
-            p {
-                margin-top: 1.3rem;
-                @include textLight($textXS, $ColWhite, $shadowBlueText);
-            }
+        h2 {
+            @include textMed($textM, $ColWhite, $shadowBlueTitle);
         }
 
-        .juego1__imagen {
-            height: auto;
-            margin: 0px 0px 1rem 0px;
-
-            img {
-                height: 220px;
-
-            }
-        }
-
-        .juego2__texto {
-
-            h2 {
-                @include textMed($textM, $ColWhite, $shadowBlueTitle);
-            }
-
-            p {
-                margin-top: 1.3rem;
-                @include textLight($textXS, $ColWhite, $shadowBlueText);
-            }
-        }
-
-        .juego2__imagen {
-            height: auto;
-            margin: 0px 0px 1rem 0px;
-
-            img {
-                height: 220px;
-
-            }
-        }
-
-        .juego3__texto {
-
-            h2 {
-                @include textMed($textM, $ColWhite, $shadowBlueTitle);
-            }
-
-            p {
-                margin-top: 1.3rem;
-                @include textLight($textXS, $ColWhite, $shadowBlueText);
-            }
-        }
-
-        .juego3__imagen {
-            height: auto;
-            margin: 0px 0px 1rem 0px;
-
-            img {
-                height: 220px;
-
-            }
-        }
-    
-        .juego4{
-            height: 730px;
-        }
-
-        .juego4__texto{
-
-            h2{
-                margin-top: 1.3rem;
-                @include textMedBrown($textM,$ColWhite); 
-            }
-
-            p{
-                @include textLightBrown($textXS,$ColWhite);
-            }
+        p {
+            margin-top: 1.3rem;
+            @include textLight($textXS, $ColWhite, $shadowBlueText);
         }
     }
 
-    @media only screen and (max-width:290px) {
-        .juego4{
-            height: 800px;
+    .juego1__imagen {
+        height: auto;
+        margin: 0px 0px 1rem 0px;
+
+        img {
+            height: 220px;
+
         }
+    }
+
+    .juego2__texto {
+
+        h2 {
+            @include textMed($textM, $ColWhite, $shadowBlueTitle);
+        }
+
+        p {
+            margin-top: 1.3rem;
+            @include textLight($textXS, $ColWhite, $shadowBlueText);
+        }
+    }
+
+    .juego2__imagen {
+        height: auto;
+        margin: 0px 0px 1rem 0px;
+
+        img {
+            height: 220px;
+
+        }
+    }
+
+    .juego3__texto {
+
+        h2 {
+            @include textMed($textM, $ColWhite, $shadowBlueTitle);
+        }
+
+        p {
+            margin-top: 1.3rem;
+            @include textLight($textXS, $ColWhite, $shadowBlueText);
+        }
+    }
+
+    .juego3__imagen {
+        height: auto;
+        margin: 0px 0px 1rem 0px;
+
+        img {
+            height: 220px;
+
+        }
+    }
+
+    .juego4{
+        height: 730px;
+    }
+
+    .juego4__texto{
+
+        h2{
+            margin-top: 1.3rem;
+            @include textMedBrown($textM,$ColWhite); 
+        }
+
+        p{
+            @include textLightBrown($textXS,$ColWhite);
+        }
+    }
+}
+
+@media only screen and (max-width:290px) {
+    .juego4{
+        height: 800px;
     }
 }
 
