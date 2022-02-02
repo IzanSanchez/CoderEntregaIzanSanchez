@@ -4,15 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Coda&display=swap");
 @font-face {
   font-family: Apex Med;
-  src: url(assets/fonts/Apex\ Mk3-Medium.otf);
+  src: url(../assets/fonts/Apex\ Mk3-Medium.otf);
 }
 @font-face {
   font-family: Apex Light;
-  src: url(assets/fonts/Apex\ Mk3-ExtraLight.ttf);
+  src: url(../assets/fonts/Apex\ Mk3-ExtraLight.ttf);
 }
 @font-face {
   font-family: Azurite;
-  src: url(assets/fonts/Azurite_Regular.otf);
+  src: url(../assets/fonts/Azurite_Regular.otf);
 }
 /*=======================*/
 /*====GENERAL SETTINGS===*/
@@ -226,7 +226,7 @@ footer {
 /*====MAIN====*/
 .bodyIndex main {
   /*grid-area: IndexMain;*/
-  background-image: url(assets/img/BG.png);
+  background-image: url(../assets/img/BG.png);
   background-size: cover;
   display: grid;
   grid-template-rows: repeat(4, auto);
@@ -248,7 +248,7 @@ footer {
 .jumbotron {
   grid-area: cabecera;
   height: 800px;
-  background-image: url(assets/img/TemploExterior.png);
+  background-image: url(../assets/img/TemploExterior.png);
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -259,7 +259,7 @@ footer {
 }
 
 .container__img {
-  background-image: url(assets/img/logo.png);
+  background-image: url(../assets/img/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -571,7 +571,7 @@ footer {
 /*=========FAQ=========*/
 /*======================*/
 .bodyFaq {
-  background-image: url(assets/img/BG.png);
+  background-image: url(../assets/img/BG.png);
   background-size: cover;
   overflow-x: hidden;
   display: grid;
@@ -583,6 +583,7 @@ footer {
 .faq {
   grid-area: faqMain;
   margin: 6rem 10% 8rem 10%;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -642,7 +643,6 @@ footer {
   /* Unicode character for "minus" sign (-) */
 }
 
-/* Style the accordion panel. Note: hidden by default */
 .panel {
   width: 100%;
   margin: -10px;
@@ -675,7 +675,7 @@ footer {
 /*=========BLOG=========*/
 /*======================*/
 .bodyBlog {
-  background-image: url(assets/img/BG.png);
+  background-image: url(../assets/img/BG.png);
   background-size: cover;
   overflow-x: hidden;
   display: grid;
@@ -733,7 +733,7 @@ footer {
 /*=========ENTRADA BLOG=========*/
 /*==============================*/
 .bodyBlogEntry main {
-  background-image: url(assets/img/BG.png);
+  background-image: url(../assets/img/BG.png);
   background-size: cover;
   overflow-x: hidden;
   display: grid;
@@ -1216,7 +1216,12 @@ footer {
   }
 
   .entradaTitulo {
-    padding: 80px 0 120px 0;
+    font-family: "Azurite";
+    font-size: 1.2rem;
+    color: #c7e2df;
+    text-shadow: 3px 3px 3px #1a6864;
+    letter-spacing: 2px;
+    padding: 80px 0 160px 0;
   }
 
   .entradaCuerpo {

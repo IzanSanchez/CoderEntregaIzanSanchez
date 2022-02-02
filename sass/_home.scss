@@ -21,7 +21,7 @@
 
 .bodyIndex main{
     /*grid-area: IndexMain;*/
-    background-image: url(assets/img/BG.png);
+    background-image: url(../assets/img/BG.png);
     background-size:cover;
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -48,7 +48,7 @@
     .jumbotron{
         grid-area: cabecera;
         height: 800px;
-        background-image: url(assets/img/TemploExterior.png);
+        background-image: url(../assets/img/TemploExterior.png);
         background-size: cover;
         background-position: center;
         overflow: hidden;
@@ -61,7 +61,7 @@
     } 
 
     .container__img{
-        background-image: url(assets/img/logo.png);
+        background-image: url(../assets/img/logo.png);
         background-size:contain;
         background-repeat: no-repeat;
         background-position: center;
